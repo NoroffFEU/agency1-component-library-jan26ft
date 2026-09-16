@@ -1,0 +1,50 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-list li {
+  display: flex;
+  gap: 10px;
+}
+
+.page-btn, .nav-btn {
+  font-size: 1rem;
+  min-width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: 1px solid #8C3B1E;
+  background: #ecdad3;
+}
+
+.page-btn.is-current {
+  background: #8C3B1E;
+  border-color: #140804;
+  color: white;
+}
+
+.nav-btn:disabled {
+  background: #fae6ca;
+  color: #b6aba8;
+  border-color: #c0bdbb;
+}
+
+.ellipsis {
+  display: flex;
+  align-items: center;
+}
+
