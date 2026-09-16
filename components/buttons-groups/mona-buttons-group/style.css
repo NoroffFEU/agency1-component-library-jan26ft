@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.button-group {
+ width: fit-content;
+ border: none;
+ border-radius: 3px;
+ overflow: hidden;
+
+ display: flex;
+ flex-direction: row;
+}
+.button-group--vertical{
+  flex-direction: column;
+}
+
+.button-group__btn {
+  background: transparent;
+  border: 1px solid rgba(21, 130, 173, 0.7);
+  border-top: none;
+  border-bottom: none;
+
+  padding: 8px 16px;
+  margin: -0.5px;
+
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  cursor: pointer;
+
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.button-group__btn:last-child{
+  border-right: none;
+}
+.button-group__btn:first-child{
+  border-left: none;
+}
+
+.button-group--secondary .button-group__btn{
+  border: 1px solid rgba(49, 132, 26, 0.7);
+  border-left: none;
+  border-right: none;
+}
+.button-group--secondary .button-group__btn:first-child{
+  border-top: none;
+}
+.button-group--secondary .button-group__btn:last-child{
+  border-bottom: none;
+}
+
+.button-group__btn:hover {
+  color: #333;
+  background: rgba(0, 0, 0, 0.074);
+}
+
+.button-group__btn:focus-visible {
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: -1px;
+} 
+.button-group__btn.active {
+  background: linear-gradient(315deg, rgb(11, 124, 169), rgb(49, 176, 227));
+  color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.button-group--secondary .button-group__btn.active{
+  background: linear-gradient(315deg, rgb(74, 180, 45), rgb(85, 222, 47));
+}
