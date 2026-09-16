@@ -32,6 +32,7 @@ const COMPONENTS = {
   ],
   "buttons-groups": [
     { name: "Button Group", folder: "example-buttons-group", author: "Example" },
+    { name: "Button Group", folder: "mona-buttons-group", author: "Mona" },
   ],
   cards: [
     { name: "Profile Card", folder: "example-profile", author: "Example" },
