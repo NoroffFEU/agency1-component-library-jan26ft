@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 320px;
+  padding: 14px 16px;
+  margin-top: 5px;
+
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toast__message {
+  flex: 1;
+}
+
+.toast__close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.toast.success {
+  background: #e8f7ee;
+  border: 1px solid #8fd3a6;
+  color: #1f6b3a;
+}
+
+.toast.warning {
+  background: #fff7dd;
+  border: 1px solid #e6c96a;
+  color: #7a5a00;
+}
+
+.toast.error {
+  background: #fdeaea;
+  border: 1px solid #e5a0a0;
+  color: #8a1f1f;
+}
+
+.button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+
+  background: #222;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
