@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #B7E1F5;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.rating-demo {
+    text-align: center;
+}
+
+.rating-demo h3 {
+    margin-bottom: 16px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.rating {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+/* the ravioli shape */
+.rating__ravioli {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border: 2.5px dashed #c9974e;
+    border-radius: 8px;
+    background: #f3dfb0;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+/* dotted seam in the middle, like a pressed pasta edge */
+.rating__ravioli::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px dotted #c9974e;
+    transform: translate(-50%, -50%);
+    transition: border-color 0.2s ease;
+}
+
+/* filled state for the interactive version, controlled by JS */
+.rating__ravioli.active {
+    background: #dba869;
+    border-color: #a97c46;
+    transform: scale(1.1);
+}
+
+.rating__ravioli.active::after {
+    border-color: #a97c46;
+}
+
+/* read-only variant: no pointer, no hover animation */
+.rating--readonly .rating__ravioli {
+    cursor: default;
+}
+
+.rating--readonly .rating__ravioli:hover {
+    transform: scale(1);
+}
+
+/* filled state for the read-only version, set directly via class */
+.rating__ravioli--filled {
+    background: #dba869;
+    border-color: #a97c46;
+}
+
+.rating__ravioli--filled::after {
+    border-color: #a97c46;
+}
+
+.rating-text {
+    font-size: 1rem;
+    color: #666;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravioli Rating</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="rating-demo">
+            <h3>Rate this ravioli component:</h3>
+            <div class="rating" id="rating1">
+                <button class="rating__ravioli" data-value="1" aria-label="1 ravioli"></button>
+                <button class="rating__ravioli" data-value="2" aria-label="2 ravioli"></button>
+                <button class="rating__ravioli" data-value="3" aria-label="3 ravioli"></button>
+                <button class="rating__ravioli" data-value="4" aria-label="4 ravioli"></button>
+                <button class="rating__ravioli" data-value="5" aria-label="5 ravioli"></button>
+            </div>
+            <p class="rating-text"><span id="ratingValue">0</span> / 5 ravioli</p>
+        </div>
+        <div class="rating-demo">
+            <h3>Read-only example:</h3>
+            <div class="rating rating--readonly">
+                <span class="rating__ravioli rating__ravioli--filled"></span>
+                <span class="rating__ravioli rating__ravioli--filled"></span>
+                <span class="rating__ravioli rating__ravioli--filled"></span>
+                <span class="rating__ravioli"></span>
+                <span class="rating__ravioli"></span>
+            </div>
+            <p class="rating-text">3 out of 5 ravioli (247 reviews)</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

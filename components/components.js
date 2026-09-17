@@ -59,7 +59,9 @@ const COMPONENTS = {
   ],
   ratings: [
     { name: "Star Rating", folder: "example-stars", author: "Example" },
+    { name: "Ravioli Rating", folder: "paula", author: "Paula" },
   ],
+  
   spinners: [
     { name: "Loading Spinner", folder: "example-dots", author: "Example" },
   ],
