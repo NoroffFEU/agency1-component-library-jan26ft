@@ -29,7 +29,7 @@ const COMPONENTS = {
     { name: "Neon Button", folder: "example-neon", author: "Example" },
     {
       name: "Primary Button",
-      folder: "primary-button-Soreng95",
+      folder: "Soreng95",
       author: "Soreng95",
     },
   ],
