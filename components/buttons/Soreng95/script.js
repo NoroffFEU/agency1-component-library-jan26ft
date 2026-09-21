@@ -1,6 +1,7 @@
 // Loading state for .btn.
 function setLoading(button, isLoading) {
   const label = button.querySelector(".btn-text");
+  if (!label) return;
 
   if (isLoading) {
     button.dataset.originalText = label.textContent;
