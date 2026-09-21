@@ -1,0 +1,224 @@
+:root {
+  --color-on-primary: #ffffff;
+  --color-primary-light: #fff1ee;
+
+  --color-secondary: #eef1f5;
+  --color-secondary-dark: #dde1e8;
+  --color-secondary-border: #ccd3dd;
+  --color-on-secondary: #1a1a2e;
+
+  --color-success: #12b76a;
+  --color-success-dark: #0e9155;
+  --color-on-success: #ffffff;
+
+  --color-destructive: #e5484d;
+  --color-destructive-dark: #c9383d;
+  --color-on-destructive: #ffffff;
+
+  --color-muted: #f1f3f6;
+  --color-disabled-bg: #f1f3f6;
+  --color-disabled-text: #9aa2ad;
+  --color-disabled-border: #dfe3e9;
+
+  --btn-radius: 10px;
+}
+
+/* Base */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text, #1a1a2e);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--btn-radius, 10px);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary, #ff2f02);
+  outline-offset: 2px;
+}
+
+/* Variants */
+
+.btn.primary {
+  background: var(--color-primary, #ff2f02);
+  color: var(--color-on-primary, #ffffff);
+  border-color: var(--color-primary, #ff2f02);
+}
+
+.btn.primary:hover {
+  background: var(--color-primary-dark, #e22602);
+  border-color: var(--color-primary-dark, #e22602);
+}
+
+.btn.secondary {
+  background: var(--color-secondary, #eef1f5);
+  color: var(--color-on-secondary, #1a1a2e);
+  border-color: var(--color-secondary-border, #ccd3dd);
+}
+
+.btn.secondary:hover {
+  background: var(--color-secondary-dark, #dde1e8);
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--color-primary, #ff2f02);
+  border-color: var(--color-primary, #ff2f02);
+}
+
+.btn.outline:hover {
+  background: var(--color-primary-light, #fff1ee);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--color-text, #1a1a2e);
+  border-color: transparent;
+}
+
+.btn.ghost:hover {
+  background: var(--color-muted, #f1f3f6);
+}
+
+.btn.destructive {
+  background: var(--color-destructive, #e5484d);
+  color: var(--color-on-destructive, #ffffff);
+  border-color: var(--color-destructive, #e5484d);
+}
+
+.btn.destructive:hover {
+  background: var(--color-destructive-dark, #c9383d);
+  border-color: var(--color-destructive-dark, #c9383d);
+}
+
+.btn.success {
+  background: var(--color-success, #12b76a);
+  color: var(--color-on-success, #ffffff);
+  border-color: var(--color-success, #12b76a);
+}
+
+.btn.success:hover {
+  background: var(--color-success-dark, #0e9155);
+  border-color: var(--color-success-dark, #0e9155);
+}
+
+.btn.link {
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  color: var(--color-primary, #ff2f02);
+  border-color: transparent;
+}
+
+.btn.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Sizes */
+
+.btn.small {
+  padding: 7px 14px;
+  font-size: 13px;
+}
+
+.btn.large {
+  padding: 14px 26px;
+  font-size: 17px;
+}
+
+.btn.full {
+  display: flex;
+  width: 100%;
+}
+
+/* Disabled */
+
+.btn:disabled {
+  background: var(--color-disabled-bg, #f1f3f6);
+  color: var(--color-disabled-text, #9aa2ad);
+  border-color: var(--color-disabled-border, #dfe3e9);
+  cursor: not-allowed;
+}
+
+/* Loading */
+
+.btn.loading {
+  pointer-events: none;
+}
+
+.btn.loading .spinner {
+  display: block;
+}
+
+.spinner {
+  display: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Demo page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #ffffff;
+  color: var(--color-text, #1a1a2e);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--color-border, #e9ecef);
+  border-radius: var(--radius, 12px);
+}
+
+.card h2 {
+  margin-bottom: 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted, #888);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
