@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2>Variants and sizes</h2>
+
+        <h3>Primary</h3>
+        <div class="row">
+          <button class="btn primary small">Small</button>
+          <button class="btn primary">Medium</button>
+          <button class="btn primary large">Large</button>
+        </div>
+
+        <h3>Secondary</h3>
+        <div class="row">
+          <button class="btn secondary small">Small</button>
+          <button class="btn secondary">Medium</button>
+          <button class="btn secondary large">Large</button>
+        </div>
+
+        <h3>Outline</h3>
+        <div class="row">
+          <button class="btn outline small">Small</button>
+          <button class="btn outline">Medium</button>
+          <button class="btn outline large">Large</button>
+        </div>
+
+        <h3>Ghost</h3>
+        <div class="row">
+          <button class="btn ghost small">Small</button>
+          <button class="btn ghost">Medium</button>
+          <button class="btn ghost large">Large</button>
+        </div>
+
+        <h3>Destructive</h3>
+        <div class="row">
+          <button class="btn destructive small">Small</button>
+          <button class="btn destructive">Medium</button>
+          <button class="btn destructive large">Large</button>
+        </div>
+
+        <h3>Success</h3>
+        <div class="row">
+          <button class="btn success small">Small</button>
+          <button class="btn success">Medium</button>
+          <button class="btn success large">Large</button>
+        </div>
+
+        <h3>Link</h3>
+        <div class="row">
+          <button class="btn link small">Small</button>
+          <button class="btn link">Medium</button>
+          <button class="btn link large">Large</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Full width</h2>
+        <div class="row">
+          <button class="btn primary full">Full width</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Disabled</h2>
+        <div class="row">
+          <button class="btn primary" disabled>Primary</button>
+          <button class="btn secondary" disabled>Secondary</button>
+          <button class="btn outline" disabled>Outline</button>
+          <button class="btn ghost" disabled>Ghost</button>
+          <button class="btn destructive" disabled>Destructive</button>
+          <button class="btn success" disabled>Success</button>
+          <button class="btn link" disabled>Link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Loading</h2>
+        <div class="row">
+          <button
+            class="btn primary"
+            data-loading-text="Working on it..."
+            data-demo-ms="2400"
+          >
+            <span class="spinner"></span>
+            <span class="btn-text">Continue</span>
+          </button>
+
+          <button
+            class="btn secondary"
+            data-loading-text="Processing..."
+            data-demo-ms="2200"
+          >
+            <span class="spinner"></span>
+            <span class="btn-text">Save</span>
+          </button>
+
+          <button
+            class="btn destructive small"
+            data-loading-text="Deleting..."
+            data-demo-ms="1800"
+          >
+            <span class="spinner"></span>
+            <span class="btn-text">Delete account</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
