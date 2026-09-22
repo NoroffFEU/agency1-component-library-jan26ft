@@ -14,6 +14,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Accordion */
+
 .accordion__item {
     border: 2px solid #C4C2C2;
     border-radius: 8px;
@@ -99,6 +101,9 @@ body {
 }
 
 /* This hides the accordion body by default */
-.accordion__body { display: none; }
+.accordion__body { 
+    display: none;
+    padding: 16px;
+}
 
 .accordion__item--open .accordion__body {display: block; }
