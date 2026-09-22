@@ -6,9 +6,8 @@ const deleteBtn = document.querySelector("#deleteBtn");
 const yesBtn = document.querySelector("#yesBtn");
 const noBtn = document.querySelector("#noBtn");
 const dialogBox = document.querySelector("#dialogBox");
-const popUp = document.querySelector("#popUp");
 
-//delete button - hides button - shows dialogBox
+//delete button - hides delete button - shows dialogBox
 
 deleteBtn.addEventListener("click", function () {
   deleteBtn.style.display = "none";
@@ -17,11 +16,12 @@ deleteBtn.addEventListener("click", function () {
   noBtn.style.display = "block";
 });
 
-//yes button - hides dialogBox - shows popup
+//yes button - hides dialogBox - shows popup - goes back to delete button
 
 yesBtn.addEventListener("click", function () {
   dialogBox.style.display = "none";
-  popUp.style.display = "block";
+  alert("Account deleted!");
+  deleteBtn.style.display = "inline-block";
 });
 
 // no button - hides dialogBox - shows delete button
@@ -29,4 +29,13 @@ yesBtn.addEventListener("click", function () {
 noBtn.addEventListener("click", function () {
   dialogBox.style.display = "none";
   deleteBtn.style.display = "inline-block";
+});
+
+//dialogbox closes on esc key
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    dialogBox.style.display = "none";
+    deleteBtn.style.display = "inline-block";
+  }
 });
