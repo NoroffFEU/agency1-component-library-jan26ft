@@ -4,7 +4,7 @@ A modal dialog with confirm and cancel actions.
 
 ## How to use
 
-Copy the `.modal-overlay` and trigger button HTML. Include `style.css` and `script.js`. The modal opens when the trigger button is clicked and closes on No... and esc key
+Copy the #modalCard html. Include `style.css` and `script.js`. The modal opens when the trigger button is clicked and closes on No... and esc key.
 
 ## Design decisions
 
