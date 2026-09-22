@@ -74,6 +74,9 @@ body {
 .dropdown-btn:hover {
   color: rgb(86, 84, 84);
 }
+.dropdown-btn::after{
+  content:' ▸';
+}
 
 /* Main */
 main{
@@ -101,4 +104,8 @@ h1 {
     backdrop-filter: none;
     background: inherit;
   }
+
+  .dropdown-btn::after{
+  content:' ▾';
+}
 }
