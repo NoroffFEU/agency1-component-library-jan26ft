@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Carousel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="carousel-container">
+
+    <section class="project-carousel" aria-label="Featured projects">
+
+      <div class="project-carousel__track">
+
+        <article class="project-carousel__slide active">
+          <span class="project-carousel__category">Web Design</span>
+          <h2 class="project-carousel__title">Creative Agency</h2>
+          <p class="project-carousel__description">
+            A modern website concept focused on clean design and
+            user-friendly experiences.
+          </p>
+          <button class="project-carousel__details">
+            View details
+          </button>
+        </article>
+
+        <article class="project-carousel__slide">
+          <span class="project-carousel__category">Branding</span>
+          <h2 class="project-carousel__title">Studio Identity</h2>
+          <p class="project-carousel__description">
+            A visual identity created for a modern creative studio.
+          </p>
+          <button class="project-carousel__details">
+            View details
+          </button>
+        </article>
+
+        <article class="project-carousel__slide">
+          <span class="project-carousel__category">Development</span>
+          <h2 class="project-carousel__title">Digital Platform</h2>
+          <p class="project-carousel__description">
+            A responsive digital platform designed with accessibility
+            and usability in mind.
+          </p>
+          <button class="project-carousel__details">
+            View details
+          </button>
+        </article>
+
+      </div>
+
+      <button
+        class="project-carousel__button project-carousel__button--previous"
+        aria-label="Previous project">
+        &#10094;
+      </button>
+
+      <button
+        class="project-carousel__button project-carousel__button--next"
+        aria-label="Next project">
+        &#10095;
+      </button>
+
+      <div class="project-carousel__dots"></div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
