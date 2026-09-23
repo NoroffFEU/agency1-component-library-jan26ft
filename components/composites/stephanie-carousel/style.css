@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f2;
+  font-family: Arial, sans-serif;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 650px;
+  padding: 24px;
+}
+
+.project-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-carousel__track {
+  position: relative;
+  height: 360px;
+}
+
+.project-carousel__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.project-carousel__slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-carousel__category {
+  margin-bottom: 12px;
+  color: #777777;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.project-carousel__title {
+  margin-bottom: 16px;
+  color: #222222;
+  font-size: 2rem;
+}
+
+.project-carousel__description {
+  max-width: 420px;
+  margin-bottom: 24px;
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-carousel__details {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #222222;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.project-carousel__details:hover {
+  background: #555555;
+}
+
+.project-carousel__details:focus-visible,
+.project-carousel__button:focus-visible {
+  outline: 3px solid #777777;
+  outline-offset: 3px;
+}
+
+.project-carousel__button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #222222;
+  font-size: 1rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.project-carousel__button:hover {
+  background: #eeeeee;
+}
+
+.project-carousel__button--previous {
+  left: 18px;
+}
+
+.project-carousel__button--next {
+  right: 18px;
+}
+
+.project-carousel__dots {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+  transform: translateX(-50%);
+}
+
+.project-carousel__dot {
+  width: 9px;
+  height: 9px;
+  border: none;
+  border-radius: 50%;
+  background: #cccccc;
+  cursor: pointer;
+}
+
+.project-carousel__dot.active {
+  background: #222222;
+}
+
+@media (max-width: 500px) {
+  .project-carousel__track {
+    height: 400px;
+  }
+
+  .project-carousel__slide {
+    padding: 55px;
+  }
+
+  .project-carousel__title {
+    font-size: 1.5rem;
+  }
+}
