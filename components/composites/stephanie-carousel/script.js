@@ -1,11 +1,13 @@
 const slides = document.querySelectorAll(".project-carousel__slide");
 const dotsContainer = document.querySelector(".project-carousel__dots");
 const previousButton = document.querySelector(
-  ".project-carousel__button--previous"
+  ".project-carousel__button--previous",
 );
-const nextButton = document.querySelector(
-  ".project-carousel__button--next"
-);
+const nextButton = document.querySelector(".project-carousel__button--next");
+
+//added
+
+const slideDuration = 8000;
 
 let currentIndex = 0;
 
@@ -36,6 +38,18 @@ slides.forEach((slide, index) => {
   dotsContainer.appendChild(dot);
 });
 
+//added autoplay function
+
+function autoPlay() {
+  autoPlayTimer = setInterval(() => {
+    let newIndex = currentIndex + 1;
+    if (newIndex >= slides.length) {
+      newIndex = 0;
+    }
+    showSlide(newIndex);
+  }, slideDuration);
+}
+
 nextButton.addEventListener("click", () => {
   let newIndex = currentIndex + 1;
 
@@ -55,3 +69,29 @@ previousButton.addEventListener("click", () => {
 
   showSlide(newIndex);
 });
+
+//added
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") {
+    let newIndex = currentIndex + 1;
+
+    if (newIndex >= slides.length) {
+      newIndex = 0;
+    }
+
+    showSlide(newIndex);
+  }
+
+  if (event.key === "ArrowLeft") {
+    let newIndex = currentIndex - 1;
+
+    if (newIndex < 0) {
+      newIndex = slides.length - 1;
+    }
+
+    showSlide(newIndex);
+  }
+});
+
+autoPlay();
