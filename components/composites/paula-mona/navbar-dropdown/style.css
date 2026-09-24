@@ -49,8 +49,7 @@ body {
   margin-top: 5px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
+  background-color: #ffffff;
   border-radius: 0 0 3px 3px;
   gap: 16px;
   width: 80%;
@@ -72,13 +71,15 @@ body {
   overflow: hidden;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15);
   min-width: 160px;
+  transition: max-height 0.3s ease;
 }
 
 .dropdown-menu.show {
   max-height: 300px;
   padding: 8px 0;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .dropdown-menu li {
@@ -141,9 +142,10 @@ h1 {
 }
 
   .dropdown-menu {
-
     position: absolute;
     top: 100%;
     left: 0;
+    margin-top: 5px;
+    border-radius: 0 0 3px 3px;
   }
 }

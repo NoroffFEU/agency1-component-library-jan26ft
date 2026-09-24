@@ -19,7 +19,6 @@ A sticky navbar with mobile hamburger menu toggle, and option dropdowns.
 - The logo is centered above the navigation
 - A hamburger menu is used on smaller screens.
 - The navigation is centered on larger screens.
-- A light glass/blur effect is used for the mobile menu.
 - The layout is responsive and works on different screen sizes.
 - Each category button toggles its own dropdown menu; opening one closes any other open dropdown.
 - Dropdown menus appear as elevated white panels with rounded corners, visually separating them from the page.
