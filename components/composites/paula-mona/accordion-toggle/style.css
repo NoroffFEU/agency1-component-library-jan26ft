@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #F6F8FA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Accordion */
+
+.accordion__item {
+    border: 2px solid #C4C2C2;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.accordion__header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.accordion__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+}
+
+.accordion__title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.accordion__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.accordion__subtitle {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 400;
+    padding-top: 4px;
+}
+
+.accordion__chevron {
+    font-size: 1.2rem;
+    color: #6b7280;
+    transition: transform 0.2s ease;
+    margin-left: 12px;
+}
+
+.accordion__chevron--open {
+    transform: rotate(180deg);
+}
+
+.accordion__body {
+    padding: 0 16px 16px 16px;
+}
+
+.accordion__row-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.accordion__row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.accordion__row:not(:first-child) {
+    border-top: 1px solid #eee;
+}
+
+.accordion__row-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.accordion__row-subtitle {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Switch */
+
+.switch{
+    position: relative;
+    display: inline-block;
+    min-width: 25px;
+    margin-left: 10px;
+}
+
+.switch__input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch__slider{
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    background: rgb(105, 105, 105);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.switch__slider::before {
+    content: "";
+    position: absolute;
+    place-self: center;
+    width: 8px;
+    height: 15px;
+    background: rgb(199, 199, 199);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.switch__input:disabled + .switch__slider,
+.accordion__row-container:has(.switch__input:not(:checked)) .accordion__row{
+    opacity: 0.5;
+}
+
+.accordion__header-container:has(.switch__input:not(:checked)) .accordion__title-group {
+    opacity: 0.5;
+}
+
+.switch input:checked + .switch__slider {
+    background: #7dc4ff;
+}
+
+.switch input:checked + .switch__slider::before {
+    transform: translateX(17px);
+}
+.switch__input:focus-visible + .switch__slider{
+    outline: 1px solid blue;
+    outline-offset: 2px;
+}
+
+
+/* This hides the accordion body by default */
+.accordion__body { 
+    display: none;
+    padding: 16px;
+}
+
+.accordion__item--open .accordion__body {
+    display: block; 
+}

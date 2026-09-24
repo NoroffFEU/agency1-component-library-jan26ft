@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accordion with Toggle Switch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="accordion">
+        <div class="accordion__item">
+            <div class="accordion__header-container">
+                <button class="accordion__header">
+                    <span class="accordion__title-group">
+                        <span class="accordion__title">Notifications</span>
+                        <span class="accordion__subtitle">Control what you want to be notified about</span>
+                    </span>
+                    <span class="accordion__chevron">⌄</span>
+                </button>
+                <!-- Switch -->
+                <label class="switch switch--header">
+                    <input type="checkbox" class="switch__input">
+                    <span class="switch__slider"></span>
+                </label>
+
+            </div>
+
+            <div class="accordion__body">
+                <div class="accordion__row-container">
+                    <div class="accordion__row">
+                        <span class="accordion__row-title">Email notifications</span>
+                        <span class="accordion__row-subtitle">Get updates sent to your inbox</span>
+                    </div>
+                <!-- Switch -->
+                    <label class="switch"> 
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__slider"></span>
+                    </label>
+                </div>
+                <div class="accordion__row-container">
+                    <div class="accordion__row">
+                        <span class="accordion__row-title">Text message notifications</span>
+                        <span class="accordion__row-subtitle">Get updates sent via SMS</span>
+                    </div>
+                <!-- Switch -->
+                    <label class="switch">
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__slider"></span>
+                    </label>
+                </div>
+                <div class="accordion__row-container">
+                    <div class="accordion__row">    
+                        <span class="accordion__row-title">Marketing updates</span>
+                        <span class="accordion__row-subtitle">Receive news, offers, and promotions</span>
+                    </div>
+                <!-- Switch -->
+                    <label class="switch">
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion__item">
+            <div class="accordion__header-container">
+                <button class="accordion__header">
+                    <span class="accordion__title-group">
+                        <span class="accordion__title">Appearance</span>
+                        <span class="accordion__subtitle">Customize how the app looks and feels</span>
+                    </span>
+                    <span class="accordion__chevron">⌄</span>
+                </button>
+            <!-- Switch -->
+                <label class="switch switch--header">
+                    <input type="checkbox" class="switch__input"    >
+                    <span class="switch__slider"></span>
+                </label>
+            </div>
+            <div class="accordion__body">
+                <div class="accordion__row-container">
+                    <div class="accordion__row">
+                        <span class="accordion__row-title">Dark mode</span>
+                        <span class="accordion__row-subtitle">Switch between light and dark theme</span>
+                    </div>
+                    <!-- Switch -->
+                    <label class="switch"> 
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__slider"></span>
+                    </label>
+                </div>
+                <div class="accordion__row-container">
+                    <div class="accordion__row">
+                        <span class="accordion__row-title">Reduce motion</span>
+                        <span class="accordion__row-subtitle">Turn off animations and transitions</span>
+                    </div>
+                    <!-- Switch -->
+                    <label class="switch"> 
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion__item">
+            <div class="accordion__header-container">
+                <button class="accordion__header">
+                    <span class="accordion__title-group">
+                        <span class="accordion__title">Privacy</span>
+                        <span class="accordion__subtitle">Manage your privacy and data</span>
+                    </span>
+                    <span class="accordion__chevron">⌄</span>
+                </button>
+            <!-- Switch -->
+                <label class="switch switch--header">
+                    <input type="checkbox" class="switch__input">
+                    <span class="switch__slider"></span>
+                </label>
+            </div>
+            <div class="accordion__body">
+                <div class="accordion__row-container">
+                    <div class="accordion__row">
+                        <span class="accordion__row-title">Share usage data</span>
+                        <span class="accordion__row-subtitle">Help us improve the app</span>
+                    </div>
+                    <!-- Switch -->
+                    <label class="switch"> 
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__slider"></span>
+                    </label>
+                </div>
+                <div class="accordion__row-container">
+                    <div class="accordion__row">
+                        <span class="accordion__row-title">Personalized content</span>
+                        <span class="accordion__row-subtitle">Get recommendations based on your activity</span>
+                    </div>
+                    <!-- Switch -->
+                    <label class="switch"> 
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__slider"></span>
+                    </label>
+                </div>
+                <div class="accordion__row-container">
+                    <div class="accordion__row">
+                        <span class="accordion__row-title">Location access</span>
+                        <span class="accordion__row-subtitle">Allow the app to use your location</span>
+                    </div>
+                    <!-- Switch -->
+                    <label class="switch"> 
+                        <input type="checkbox" class="switch__input">
+                        <span class="switch__slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
