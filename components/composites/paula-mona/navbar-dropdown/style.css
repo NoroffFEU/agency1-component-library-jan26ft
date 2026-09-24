@@ -47,16 +47,13 @@ body {
 .nav-menu{
   position: absolute;
   margin-top: 5px;
-
   display: flex;
   flex-direction: column;
-
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(4px);
   border-radius: 0 0 3px 3px;
-
   gap: 16px;
-  width: auto;
+  width: 80%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
@@ -73,10 +70,29 @@ body {
 .dropdown-menu {
   max-height: 0;
   overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  min-width: 160px;
 }
 
 .dropdown-menu.show {
   max-height: 300px;
+  padding: 8px 0;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #291805;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f2f5;
+  color: rgb(105, 38, 19);
 }
 
 /* Nav buttons */
@@ -114,8 +130,8 @@ h1 {
     flex-direction: row;
     max-height: none;
     width: auto;
+    overflow: visible;
     justify-content: center;
-
     backdrop-filter: none;
     background: inherit;
   }
@@ -125,6 +141,7 @@ h1 {
 }
 
   .dropdown-menu {
+
     position: absolute;
     top: 100%;
     left: 0;
