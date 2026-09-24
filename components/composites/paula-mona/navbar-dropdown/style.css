@@ -64,6 +64,21 @@ body {
 .nav-menu.open{
   max-height: 500px;
 }
+
+.nav-menu > li {
+  position: relative;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.dropdown-menu.show {
+  max-height: 300px;
+}
+
 /* Nav buttons */
 .dropdown-btn{
   border: none;
@@ -93,7 +108,7 @@ h1 {
   .menu-toggle{
     display: none;
   }
- 
+
   .nav-menu{
     position: relative;
     flex-direction: row;
@@ -108,4 +123,10 @@ h1 {
   .dropdown-btn::after{
   content:' ▾';
 }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 }
