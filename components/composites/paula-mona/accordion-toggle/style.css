@@ -25,6 +25,12 @@ body {
     background: #ffffff;
 }
 
+.accordion__header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
 .accordion__header {
     width: 100%;
     display: flex;
@@ -72,11 +78,17 @@ body {
     padding: 0 16px 16px 16px;
 }
 
+.accordion__row-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
 .accordion__row {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 12px 0;
 }
 
 .accordion__row:not(:first-child) {
@@ -100,10 +112,64 @@ body {
     max-width: 400px;
 }
 
+/* Switch */
+
+.switch{
+  position: relative;
+  display: inline-block;
+  min-width: 25px;
+  margin-left: 10px;
+}
+
+.switch__input{
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+.switch__slider{
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  background: grey;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.switch__slider::before {
+  content: "";
+  position: absolute;
+  place-self: center;
+  width: 8px;
+  height: 15px;
+  background: rgb(199, 199, 199);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.switch__slider .switch--disable{
+    background: red;
+}
+
+.switch input:checked + .switch__slider {
+  background: #7dc4ff;
+}
+
+.switch input:checked + .switch__slider::before {
+  transform: translateX(17px);
+}
+.switch__input:focus-visible + .switch__slider{
+    outline: 1px solid blue;
+    outline-offset: 2px;
+}
+
+
 /* This hides the accordion body by default */
 .accordion__body { 
     display: none;
     padding: 16px;
 }
 
-.accordion__item--open .accordion__body {display: block; }
+.accordion__item--open .accordion__body {
+    display: block; 
+}
