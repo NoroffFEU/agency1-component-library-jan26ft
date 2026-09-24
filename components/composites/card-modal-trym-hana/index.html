@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card + Modal Composite</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="profile-card">
+      <div class="profile-card__avatar">AJ</div>
+
+      <h2>Alex Johnson</h2>
+      <p>Front-end developer</p>
+
+      <button class="profile-card__button">More info</button>
+    </div>
+
+    <dialog class="modal" id="info-modal" aria-labelledby="modal-title">
+      <h3 class="modal__title" id="modal-title">Alex Johnson</h3>
+
+      <p class="modal__text">
+        Front-end developer focused on accessible interfaces and reusable
+        component libraries built with vanilla HTML, CSS and JavaScript.
+      </p>
+
+      <ul class="modal__list">
+        <li><strong>Experience:</strong> 5 years</li>
+        <li><strong>Focus:</strong> Accessibility, design systems</li>
+        <li><strong>Location:</strong> Oslo, Norway</li>
+      </ul>
+
+      <button class="modal__close" type="button">Close</button>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
