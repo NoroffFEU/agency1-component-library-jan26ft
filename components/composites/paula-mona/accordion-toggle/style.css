@@ -131,7 +131,7 @@ body {
   position: absolute;
   width: 25px;
   height: 15px;
-  background: grey;
+  background: rgb(105, 105, 105);
   border-radius: 3px;
   cursor: pointer;
   transition: 0.3s;
@@ -147,8 +147,9 @@ body {
   border-radius: 3px;
   transition: 0.3s;
 }
-.switch__slider .switch--disable{
-    background: red;
+.switch__input:disabled + .switch__slider,
+.accordion__row-container:has(.switch__input:disabled) .accordion__row{
+    opacity: 0.5;
 }
 
 .switch input:checked + .switch__slider {
