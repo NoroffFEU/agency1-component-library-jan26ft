@@ -7,7 +7,7 @@ const nextButton = document.querySelector(".project-carousel__button--next");
 
 //added
 
-const slideDuration = 8000;
+const slideDuration = 5000;
 
 let currentIndex = 0;
 
@@ -50,6 +50,11 @@ function autoPlay() {
   }, slideDuration);
 }
 
+function resetInterval() {
+  clearInterval(autoPlayTimer);
+  autoPlay();
+}
+
 nextButton.addEventListener("click", () => {
   let newIndex = currentIndex + 1;
 
@@ -58,6 +63,7 @@ nextButton.addEventListener("click", () => {
   }
 
   showSlide(newIndex);
+  resetInterval();
 });
 
 previousButton.addEventListener("click", () => {
@@ -68,6 +74,7 @@ previousButton.addEventListener("click", () => {
   }
 
   showSlide(newIndex);
+  resetInterval();
 });
 
 //added arrow key navigation
@@ -81,6 +88,7 @@ document.addEventListener("keydown", (event) => {
     }
 
     showSlide(newIndex);
+    resetInterval();
   }
 
   if (event.key === "ArrowLeft") {
@@ -91,6 +99,7 @@ document.addEventListener("keydown", (event) => {
     }
 
     showSlide(newIndex);
+    resetInterval();
   }
 });
 
@@ -117,12 +126,14 @@ function handleSwipe() {
       newIndex = 0;
     }
     showSlide(newIndex);
+    resetInterval();
   } else {
     let newIndex = currentIndex - 1;
     if (newIndex < 0) {
       newIndex = slides.length - 1;
     }
     showSlide(newIndex);
+    resetInterval();
   }
 }
 carousel.addEventListener("touchstart", (event) => {
