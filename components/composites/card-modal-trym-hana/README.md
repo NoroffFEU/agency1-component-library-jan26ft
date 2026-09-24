@@ -12,8 +12,8 @@ Copy the `.profile-card` and `<dialog class="modal">` blocks, then include `styl
 
 - The modal uses native `<dialog>` element with `showModal()`, which focuses on trapping an inert background for free
 - `::backdrop` styles the overlay
-- Both buttons share one rule set: pill shape, gradient fill and a shadow tinted to match, so they read as CTA's rather than plain buttons
-- `prefers-reduce-motion` disables the open animation and the button hover lift
+- Both buttons share one rule set: pill shape, gradient fill and a shadow tinted to match, so they read as CTAs rather than plain buttons
+- `prefers-reduced-motion` disables the open animation and the button hover lift
 
 # Known limitations
 
