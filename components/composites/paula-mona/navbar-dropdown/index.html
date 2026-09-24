@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar + Dropdown</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/8d67182890.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <span class="logo">
+      Sweet Brew
+    </span>
+
+    <nav class="navbar">
+      <button class="menu-toggle" id="navToggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><button class="dropdown-btn">Coffee</button>
+            <ul class="dropdown-menu">
+              <li>Espresso</li>
+              <li>Capuccino</li>
+              <li>Latte</li>
+            </ul>
+          </li>
+
+          <li><button class="dropdown-btn">Bread</button>
+            <ul class="dropdown-menu">
+              <li>Sourdough</li>
+              <li>Baguette</li>
+              <li>Ciabatta</li>
+              <li>Brioche</li>
+            </ul>
+          </li> 
+
+          <li><button class="dropdown-btn">Pastry</button>
+            <ul class="dropdown-menu">
+              <li>Croissant</li>
+              <li>Cinnammon Roll</li>
+              <li>Scone</li>
+              <li>Pain au Chocolate</li>
+            </ul>
+          </li>
+
+          <li><button class="dropdown-btn">Cake</button>
+            <ul class="dropdown-menu">
+              <li>Chocolate Cake</li>
+              <li>Carrot Cake</li>
+              <li>Red Velvet</li>
+              <li>Cheesecake</li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Café</h1>
+    <p>Browse trough the menu</p>
+    
+  </main>
+</body>
+</html>
