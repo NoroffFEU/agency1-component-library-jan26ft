@@ -70,7 +70,7 @@ previousButton.addEventListener("click", () => {
   showSlide(newIndex);
 });
 
-//added
+//added arrow key navigation
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") {
@@ -95,3 +95,41 @@ document.addEventListener("keydown", (event) => {
 });
 
 autoPlay();
+
+//added mobile swipe
+
+const carousel = document.querySelector(".carousel-container");
+
+let touchStart = 0;
+let touchEnd = 0;
+const swipeLength = 50;
+
+function handleSwipe() {
+  const distance = touchEnd - touchStart;
+
+  if (Math.abs(distance) < swipeLength) {
+    return;
+  }
+
+  if (distance < 0) {
+    let newIndex = currentIndex + 1;
+    if (newIndex >= slides.length) {
+      newIndex = 0;
+    }
+    showSlide(newIndex);
+  } else {
+    let newIndex = currentIndex - 1;
+    if (newIndex < 0) {
+      newIndex = slides.length - 1;
+    }
+    showSlide(newIndex);
+  }
+}
+carousel.addEventListener("touchstart", (event) => {
+  touchStart = event.changedTouches[0].screenX;
+});
+
+carousel.addEventListener("touchend", (event) => {
+  touchEnd = event.changedTouches[0].screenX;
+  handleSwipe();
+});
