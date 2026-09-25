@@ -38,6 +38,7 @@ const COMPONENTS = {
   ],
   carousels: [
     { name: "Image Carousel", folder: "example-slider", author: "Example" },
+    { name: "Step Carousel", folder: "soreng95", author: "Soreng95" },
   ],
   drawers: [
     { name: "Sidebar Drawer", folder: "example-sidebar", author: "Example" },
