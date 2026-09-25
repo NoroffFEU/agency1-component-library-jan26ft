@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="no">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile Card - Composite</title> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />  
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+         href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    </head>
+    <body>
+
+        <article class="profile-card">
+            <div class="profile-card__avatar" aria-hidden="true">PH</div>
+
+            <h1 class="profile-card__name">Pia Hansen</h1>
+            <p class="profile-card__title">Frontend-developer</p>
+
+            <ul class="profile-card__links">
+                <li>
+                    <a href="https://github.com/vicbru06344" class="icon-link" aria-label="Github" target="_blank" rel="noopener">
+                     <i class="fa-brands fa-github"></i>  
+                    </a>
+            </li>
+            <li>
+                <a href="mailto:pia.hansen@email.com" class="icon-link" aria-label="Send e-mail">
+                    <i class="fa-solid fa-envelope"></i>       
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/" class="icon-link" aria-label="LinkedIn" target="_blank" rel="noopener">  
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            </ul>
+
+            <button type="button" class="profile-card__button" data-email="pia.hansen@email.com">Contact me</button>
+
+        </article>
+        <script src="script.js"></script>
+    </body>
+</html>
