@@ -69,6 +69,7 @@ const COMPONENTS = {
   ],
   switches: [
     { name: "Toggle Switch", folder: "example-toggle", author: "Example" },
+    { name: "Dark Mode Switch", folder: "vicbru", author: "vicbru06344" },
   ],
   tabs: [
     { name: "Content Tabs", folder: "example-content", author: "Example" },
