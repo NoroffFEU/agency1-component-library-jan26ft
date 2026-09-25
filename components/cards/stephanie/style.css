@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f2;
+  font-family: Arial, sans-serif;
+}
+
+.card-container {
+  padding: 24px;
+}
+
+.team-card {
+  width: 360px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.team-card__avatar {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  background: #222222;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.team-card__label {
+  margin-bottom: 8px;
+  color: #777777;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.team-card__name {
+  margin-bottom: 6px;
+  color: #222222;
+  font-size: 1.6rem;
+}
+
+.team-card__role {
+  margin-bottom: 18px;
+  color: #666666;
+  font-size: 0.95rem;
+}
+
+.team-card__bio {
+  margin-bottom: 22px;
+  color: #444444;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.team-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.team-card__skill {
+  padding: 6px 10px;
+  background: #f0f0ee;
+  border-radius: 20px;
+  color: #333333;
+  font-size: 0.75rem;
+}
+
+.team-card__button {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #222222;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.team-card__button:hover {
+  background: #555555;
+}
+
+.team-card__button:focus-visible {
+  outline: 3px solid #777777;
+  outline-offset: 3px;
+}
