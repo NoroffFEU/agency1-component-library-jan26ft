@@ -1,55 +1,62 @@
 main {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 #modalCard {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    padding: 50px;
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
-    background-color: rgb(187, 216, 241);
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: rgb(187, 216, 241);
 }
 
 #dialogBox {
-    display: none;
-    background-color: rgb(212, 171, 202);
-    border-radius: 15px;
-    flex-direction: column;
-    font-size: 24px;
-    padding: 10px 20px; 
+  background-color: rgb(212, 171, 202);
+  border: none;
+  border-radius: 15px;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dialogBox::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* buttons */
 
-#deleteBtn, #yesBtn, #noBtn {
-    border-radius: 15px;
-    font-weight: bold;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-    padding: 5px 20px;
+#deleteBtn,
+#yesBtn,
+#noBtn {
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+  padding: 5px 20px;
 }
 
-
 #deleteBtn {
-    background-color: rgb(179, 14, 14);
-    color: aliceblue;
-    font-size: 24px;  
+  background-color: rgb(179, 14, 14);
+  color: aliceblue;
+  font-size: 24px;
 }
 
 #yesBtn {
-    background-color: rgb(179, 14, 14);
-    display: none;
-    color: aliceblue;
-    margin: 5px;
+  background-color: rgb(179, 14, 14);
+  color: aliceblue;
+  margin: 5px;
 }
 
 #noBtn {
-    background-color: rgb(39, 28, 28);
-    color: aliceblue;
-    display: none;
-    margin: 5px;
+  background-color: rgb(39, 28, 28);
+  color: aliceblue;
+  margin: 5px;
 }
-

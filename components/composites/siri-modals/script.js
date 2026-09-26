@@ -1,41 +1,44 @@
 "use strict";
 
-//getting components
-
 const deleteBtn = document.querySelector("#deleteBtn");
 const yesBtn = document.querySelector("#yesBtn");
 const noBtn = document.querySelector("#noBtn");
 const dialogBox = document.querySelector("#dialogBox");
 
-//delete button - hides delete button - shows dialogBox
-
+// Open modal
 deleteBtn.addEventListener("click", function () {
-  deleteBtn.style.display = "none";
-  dialogBox.style.display = "flex";
-  yesBtn.style.display = "block";
-  noBtn.style.display = "block";
+  dialogBox.showModal();
 });
 
-//yes button - hides dialogBox - shows popup - goes back to delete button
-
+// Confirm delete
 yesBtn.addEventListener("click", function () {
-  dialogBox.style.display = "none";
+  dialogBox.close();
   alert("Account deleted!");
-  deleteBtn.style.display = "inline-block";
 });
 
-// no button - hides dialogBox - shows delete button
-
+// Close modal
 noBtn.addEventListener("click", function () {
-  dialogBox.style.display = "none";
-  deleteBtn.style.display = "inline-block";
+  dialogBox.close();
 });
 
-//dialogbox closes on esc key
+// Close modal when clicking the backdrop
+dialogBox.addEventListener("click", function (event) {
+  if (event.target === dialogBox) {
+    const rect = dialogBox.getBoundingClientRect();
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    dialogBox.style.display = "none";
-    deleteBtn.style.display = "inline-block";
+    const clickedInside =
+      event.clientX >= rect.left &&
+      event.clientX <= rect.right &&
+      event.clientY >= rect.top &&
+      event.clientY <= rect.bottom;
+
+    if (!clickedInside) {
+      dialogBox.close();
+    }
   }
+});
+
+// Return focus to the trigger button when modal closes
+dialogBox.addEventListener("close", function () {
+  deleteBtn.focus();
 });
