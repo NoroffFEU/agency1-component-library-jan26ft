@@ -11,6 +11,7 @@ The modal opens when the DELETE button is clicked. It can be closed by:
 - Clicking the No button
 - Pressing the Escape key
 - Clicking on the backdrop outside the dialog
+- Clicking the Close button
 
 ## Design decisions
 
