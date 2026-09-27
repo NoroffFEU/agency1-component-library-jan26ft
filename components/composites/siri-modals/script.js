@@ -4,6 +4,7 @@ const deleteBtn = document.querySelector("#deleteBtn");
 const yesBtn = document.querySelector("#yesBtn");
 const noBtn = document.querySelector("#noBtn");
 const dialogBox = document.querySelector("#dialogBox");
+const closeBtn = document.querySelector("#closeBtn");
 
 // Open modal
 deleteBtn.addEventListener("click", function () {
@@ -18,6 +19,10 @@ yesBtn.addEventListener("click", function () {
 
 // Close modal
 noBtn.addEventListener("click", function () {
+  dialogBox.close();
+});
+
+closeBtn.addEventListener("click", function () {
   dialogBox.close();
 });
 
