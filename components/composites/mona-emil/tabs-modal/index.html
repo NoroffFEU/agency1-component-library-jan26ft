@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Tabs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <div class="tabs__nav" role="tablist">
+        <button class="tabs__button active" data-tab="overview" aria-selected="true" aria-controls="tab-overview">
+          Overview
+        </button>
+        <button class="tabs__button" data-tab="details" aria-selected="false" aria-controls="tab-details">
+          Details
+        </button>
+        <button class="tabs__button" data-tab="specifications" aria-selected="false" aria-controls="tab-specifications">
+          Specifications
+        </button>
+      </div>
+
+      <div class="tabs__panels">
+        <div class="tabs__panel active" id="tab-overview" role="tabpanel">
+          <h3>Overview</h3>
+          <p>Product description...</p>
+          <button class="tabs__modal-trigger">View More</button>
+        </div>
+        <div class="tabs__panel" id="tab-details" role="tabpanel">
+          <h3>Details</h3>
+          <p>Product details...</p>
+          <button class="tabs__modal-trigger">View More</button>
+        </div>
+        <div class="tabs__panel" id="tab-specifications" role="tabpanel">
+          <h3>Specifications</h3>
+          <p>Customer specifications...</p>
+          <button class="tabs__modal-trigger">View More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
