@@ -89,5 +89,10 @@ const COMPONENTS = {
       folder: "card-modal-trym-hana",
       author: "Trym & Hana",
     },
+    {
+      name: "Product List + Pagination",
+      folder: "mona-emil",
+      author: "Emil & Mona",
+    },
   ],
 };
