@@ -66,6 +66,11 @@ const COMPONENTS = {
   ],
   spinners: [
     { name: "Loading Spinner", folder: "example-dots", author: "Example" },
+    {
+      name: "Loading Spinner",
+      folder: "components/composites/paula-siriann/button-spinner",
+      author: "Siri-AnnNoroff",
+    },
   ],
   switches: [
     { name: "Toggle Switch", folder: "example-toggle", author: "Example" },
