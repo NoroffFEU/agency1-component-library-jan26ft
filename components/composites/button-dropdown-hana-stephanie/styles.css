@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f3f4f6;
+    font-family: "Segoe UO", system-ui, sans-serif;
+}
+
+/* The wrapper is the positioning context for the menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* ---- Button ---- */
+.dropdown__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: #fff;
+    color: #111827;
+
+    font: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.dropdown__button:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.dropdown__button:focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+}
+
+/* Arrow drawn in CSS so there is no icon dependency */
+
+.dropdown__arrow {
+    width: 8px;
+    height: 8px;
+
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+
+    transform: rotate(45deg), translate(-2px, -2px);
+    transition: transform 0.2s ease;
+}
+
+.dropdown__button[aria-expanded="true"] .dropdown__arrow {
+    transform: rotate(-135deg) translate(-3px, -3px);
+}
+
+/* ---- Menu ---- */
+
+.dropdown__menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 10;
+
+    min-width: 100%;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown__item {
+    display: block;
+    padding: 10px 14px;
+
+    border-radius: 6px;
+    color: #374251;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown__item:hover {
+    background: #f3f4f6;
+}
+
+.dropdown__item:focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dropdown__button,
+    .dropdown__arrow {
+        transition: none;
+    }
+}
