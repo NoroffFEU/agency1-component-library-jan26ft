@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Button + Dropdown</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="dropdown">
+            <button
+            class="dropdown__butoon"
+            type="button"
+            aria-expanded="false"
+            aria-controls="dropdown-menu"
+            >
+            <span class="dropdown__label">Menu</span>
+            <span class="dropdown__arrow" aria-hidden="true"></span>
+            </button>
+
+            <ul class="dropdown__menu" id="dropdown-menu" hidden>
+                <li><a class="dropdown__item" href="#profile">Profile</a></li>
+                <li><a class="dropdown__item" href="#settings">Settings</a></li>
+                <li><a class="dropdown__item" href="#help">Help</a></li>
+                <li><a class="dropdown__item" href="#logout">Logout</a></li>
+            </ul>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
