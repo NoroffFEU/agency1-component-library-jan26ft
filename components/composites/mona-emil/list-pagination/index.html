@@ -11,8 +11,22 @@
   <div class="container">
     <h1 class="title">Products</h1>
 
+    <div class="dropdown">
+      <button class="dropdown__trigger" type="button">
+        <span class="dropdown__selected">Sort by</span>
+        <span class="dropdown__arrow">&#9662;</span>
+      </button>
+      <ul class="dropdown__menu">
+        <li><button class="dropdown__item" type="button" data-sort="name">Name</button></li>
+        <li><button class="dropdown__item" type="button" data-sort="price">Price</button></li>
+        <li><button class="dropdown__item default" type="button" data-sort="default">Default</button></li>
+      </ul>
+    </div>
+
     <ul class="product-list" id="productList"></ul>
 
+    <div class="spinner" role="status" aria-label="Loading"></div>
+    
     <nav class="pagination" aria-label="Pagination">
       <button class="pagination__btn" id="prevBtn">← Previous</button>
       <div class="pagination__numbers" id="pageNumbers"></div>

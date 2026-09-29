@@ -1,4 +1,4 @@
-const products = [
+let products = [
   { name: "Coffee Mug", price: 149 },
   { name: "Notebook", price: 89 },
   { name: "Backpack", price: 699 },
@@ -12,6 +12,7 @@ const products = [
   { name: "T-Shirt", price: 299 },
   { name: "Cap", price: 189 },
 ];
+const originalProducts = [...products];
 
 const productsPerPage = 4;
 const totalPages = Math.ceil(products.length / productsPerPage);
@@ -21,6 +22,60 @@ const productList = document.getElementById("productList");
 const pageNumbers = document.getElementById("pageNumbers");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
+
+const spinner = document.querySelector('.spinner');
+const dropdownTrigger = document.querySelector(".dropdown__trigger");
+const dropdown = document.querySelector(".dropdown");
+const sortItems = document.querySelectorAll(".dropdown__item");
+const dropdownSelected = document.querySelector(".dropdown__selected");
+const defaultItem = document.querySelector('.default');
+
+// Dropdown sorting options
+dropdownTrigger.addEventListener('click', ()=>{
+  dropdown.classList.toggle('open')
+})
+
+sortItems.forEach((item)=>{
+
+item.addEventListener('click', ()=> {
+  const sortBy = item.dataset.sort;
+
+  dropdownSelected.textContent = item.textContent;
+
+  if(sortBy !== 'default'){
+    defaultItem.style.display = 'block';
+  }
+
+  switch(sortBy){
+    case 'name':
+    products = [...originalProducts].sort((a, b)=> 
+      a.name.localeCompare(b.name));
+    break;
+
+    case 'price':
+    products = [...originalProducts].sort((a, b) =>
+      a.price - b.price);
+    break;
+
+    case 'default':
+      products = [...originalProducts];
+      dropdownSelected.textContent = 'Sort by';
+      defaultItem.style.display = 'none';
+      break;
+  }
+
+  currentPage = 1;
+  update()
+
+  dropdown.classList.remove('open');
+});
+});
+
+document.addEventListener('click', (event) => {
+  if(!dropdown.contains(event.target)){
+    dropdown.classList.remove('open');
+  }
+  });
 
 function showProducts() {
   const start = (currentPage - 1) * productsPerPage;
@@ -65,10 +120,17 @@ function showPageNumbers() {
 }
 
 function update() {
+  productList.innerHTML = "";
+  spinner.style.display = "block";
+
+setTimeout(() =>{
   showProducts();
   showPageNumbers();
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === totalPages;
+
+  spinner.style.display = "none";
+  }, 200);
 }
 
 prevBtn.addEventListener("click", function () {
