@@ -19,4 +19,4 @@ toName.addEventListener('input', updateButtonState);
 toEmail.addEventListener('input', updateButtonState);
 message.addEventListener('input', updateButtonState);
 
-updateButtonState();x
+updateButtonState();
