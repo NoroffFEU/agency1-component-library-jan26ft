@@ -17,7 +17,7 @@ The menu is found byt its `id`, so if you decide to change `id="dropdown-menu"` 
 - The menu is hidden with the `hidden` attribute rather than `display: none`, which does hide it from screen readers as well as sighted users
 - The menu closes five ways: clicking the button again, Escape, clicking outside the component, choosing an item, and moving focus out of it with Tab
 - The font is self-hosted rather than linked from Google Fonts, so the component still renders correctly offline and has no external dependency
-- Menu items lift sligthly on hover and on keyboard focus, so mouse and keyboard users get the same feedback
+- Menu items lift slightly on hover and on keyboard focus, so mouse and keyboard users get the same feedback
 
 ## Font
 
