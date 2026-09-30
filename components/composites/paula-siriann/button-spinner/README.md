@@ -14,13 +14,15 @@ A themed form composite where a user fills in a short birthday message and sends
 ## Task breakdown
 
 **Paula**
+
 - [x] Build form structure and fields (From, To, Recipient's Email, Message)
 - [x] Style the form and background (balloon decorations)
 - [x] JS: disable/enable Send button based on field validation
 
 **Siri-Ann**
-- [ ] Design and add the spinner
-- [ ] JS: on submit, show spinner, then after a few seconds swap to "Sent!" text
+
+- [x] Design and add the spinner
+- [x] JS: on submit, show spinner, then after a few seconds swap to "Sent!" text
 
 ## Files
 
