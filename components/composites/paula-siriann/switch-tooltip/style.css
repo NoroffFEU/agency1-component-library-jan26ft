@@ -1,3 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Switch */
+
 .label {
 font-family: 'Courier New', Courier, monospace;
 font-weight: bold;
@@ -78,4 +88,29 @@ font-weight: bold;
 
 .switch.active .off {
   opacity: 0;
+}
+
+
+/* Tooltip */
+
+.tooltip {
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFECBD;
+  color: black;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.switch:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
