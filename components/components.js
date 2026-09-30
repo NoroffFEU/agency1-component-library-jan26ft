@@ -11,6 +11,8 @@
  *
  * Example — if you created components/buttons/jane-doe/:
  *
+ *
+ *
  *   { name: "Gradient Button", folder: "jane-doe", author: "Jane Doe" }
  */
 
@@ -84,6 +86,11 @@ const COMPONENTS = {
     { name: "Hover Tooltip", folder: "example-hover", author: "Example" },
   ],
   composites: [
+    {
+      name: "Card + Modal",
+      folder: "card-modal-trym-hana",
+      author: "Trym & Hana",
+    },
     {
       name: "Card + Modal",
       folder: "card-modal-trym-hana",
