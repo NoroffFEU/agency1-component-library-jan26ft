@@ -109,5 +109,10 @@ const COMPONENTS = {
       folder: "mona-emil/tabs-modal",
       author: "Mona & Emil",
     },
+    {
+      name: "Card + Tabs",
+      folder: "card-tabs-trym",
+      author: "Trym",
+    },
   ],
 };

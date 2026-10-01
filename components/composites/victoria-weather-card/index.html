@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Card - Composite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <article class="weather-card">
+        <h2 class="weather-card__city">Trondheim</h2>
+        <p class="weather-card__date" id="weatherDate"></p>
+
+        <div class="weather-card__icon" id="weatherIcon">☁️</div>
+
+        <p class="weather-card__temp" id="weatherTemp">-- °C</p>
+        <p class="weather-card__description" id="weatherDescription">Loading...</p>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>

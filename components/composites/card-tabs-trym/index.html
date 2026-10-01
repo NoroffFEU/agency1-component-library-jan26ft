@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card + Tabs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="tab-card">
+      <h1>Voidwalker</h1>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="info">Info</button>
+        <button class="tab" data-tab="stats">Stats</button>
+        <button class="tab" data-tab="requirements">Requirements</button>
+      </div>
+
+      <div class="card-content active" id="info">
+        <p class="game-type">Fantasy Action RPG</p>
+        <p>
+          Explore a ruined kingdom, uncover forgotten secrets and battle
+          creatures from the void.
+        </p>
+      </div>
+
+      <div class="card-content" id="stats">
+        <p><strong>Genre:</strong> RPG</p>
+        <p><strong>Players:</strong> 1–4</p>
+        <p><strong>Rating:</strong> 8.7/10</p>
+      </div>
+
+      <div class="card-content" id="requirements">
+        <p><strong>OS:</strong> Windows 11</p>
+        <p><strong>RAM:</strong> 16 GB</p>
+        <p><strong>Storage:</strong> 50 GB</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+.tab-card {
+  width: 330px;
+  height: 270px;
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(circle at top, rgba(125, 72, 190, 0.22), transparent 45%),
+    linear-gradient(145deg, #171020, #241238);
+
+  border: 1px solid #7d4bb0;
+  border-radius: 16px;
+
+  box-shadow:
+    0 0 0 3px rgba(125, 75, 176, 0.08),
+    0 0 22px rgba(123, 63, 193, 0.25),
+    0 10px 25px rgba(0, 0, 0, 0.18);
+
+  color: #eee8ff;
+}
+
+.tab-card h1 {
+  margin: 0 0 14px;
+  text-align: center;
+
+  font-size: 1.6rem;
+  color: #cfa8ff;
+
+  letter-spacing: 0.5px;
+
+  text-shadow: 0 0 10px rgba(198, 156, 255, 0.45);
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+
+  margin-bottom: 18px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 5px;
+
+  border: 1px solid #4b2b67;
+  border-radius: 8px;
+
+  background: rgba(39, 24, 52, 0.9);
+  color: #c7b4dc;
+
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: #342044;
+  color: white;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #6934a8, #9258d6);
+  color: white;
+
+  border-color: #b17be8;
+
+  box-shadow: 0 0 12px rgba(146, 88, 214, 0.5);
+}
+
+.card-content {
+  display: none;
+}
+
+.card-content.active {
+  display: block;
+}
+
+.card-content p {
+  margin: 7px 0;
+  line-height: 1.4;
+
+  color: #ded3ec;
+}
+
+.game-type {
+  font-weight: bold;
+  color: #ba83ff;
+}
