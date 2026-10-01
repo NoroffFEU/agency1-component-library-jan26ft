@@ -74,6 +74,11 @@ const COMPONENTS = {
   ],
   switches: [
     { name: "Toggle Switch", folder: "example-toggle", author: "Example" },
+    {
+      name: "Toggle Switch",
+      folder: "components/composites/paula-siriann/switch-tooltip",
+      author: "Siri-AnnNoroff",
+    },
   ],
   tabs: [
     { name: "Content Tabs", folder: "example-content", author: "Example" },

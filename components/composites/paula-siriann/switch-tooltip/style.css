@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Switch */
+
+.label {
+font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.toggle-row input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch.focused {
+  outline: 2px solid #fa3dcb;
+  outline-offset: 3px;
+}
+
+.switch {
+  position: relative;
+  width: 80px;
+  height: 34px;
+  border-radius: 17px;
+  background: #ccc9c9;
+  cursor: pointer;
+  
+}
+
+.knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: white;
+}
+
+.on,
+.off {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.on {
+  left: 12px;
+  color: white;
+  opacity: 0;
+}
+
+.off {
+  right: 12px;
+  color: grey;
+}
+
+.switch.active {
+  background: #fa3dcb;
+}
+
+.switch.active .knob {
+  transform: translateX(42px);
+}
+
+.switch.active .on {
+  opacity: 1;
+}
+
+.switch.active .off {
+  opacity: 0;
+}
+
+
+/* Tooltip */
+
+.tooltip {
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFECBD;
+  color: black;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.switch:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
