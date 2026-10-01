@@ -24,7 +24,6 @@ tabBtn.forEach(function (button) {
 
 tabBtn.forEach(function (button, index) {
   button.addEventListener("keydown", function (event) {
-
     if (event.key === "ArrowRight") {
       event.preventDefault();
 
@@ -41,4 +40,48 @@ tabBtn.forEach(function (button, index) {
       tabBtn[previousIndex].click();
     }
   });
+});
+
+const modalTriggers = document.querySelectorAll(".tabs__modal-trigger");
+const modalOverlay = document.getElementById("modalOverlay");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
+const closeBtn = document.getElementById("closeModal");
+
+let lastTrigger = null;
+
+function openModal(trigger) {
+  modalTitle.textContent = trigger.getAttribute("data-modal-title");
+  modalText.textContent = trigger.getAttribute("data-modal-text");
+  modalOverlay.classList.add("active");
+  lastTrigger = trigger;
+  closeBtn.focus();
+}
+
+function closeModal() {
+  modalOverlay.classList.remove("active");
+
+  if (lastTrigger) {
+    lastTrigger.focus();
+  }
+}
+
+modalTriggers.forEach(function (trigger) {
+  trigger.addEventListener("click", function () {
+    openModal(this);
+  });
+});
+
+closeBtn.addEventListener("click", closeModal);
+
+modalOverlay.addEventListener("click", function (event) {
+  if (event.target === modalOverlay) {
+    closeModal();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && modalOverlay.classList.contains("active")) {
+    closeModal();
+  }
 });
