@@ -43,45 +43,34 @@ tabBtn.forEach(function (button, index) {
 });
 
 const modalTriggers = document.querySelectorAll(".tabs__modal-trigger");
-const modalOverlay = document.getElementById("modalOverlay");
+const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
 const modalText = document.getElementById("modalText");
 const closeBtn = document.getElementById("closeModal");
 
 let lastTrigger = null;
 
-function openModal(trigger) {
-  modalTitle.textContent = trigger.getAttribute("data-modal-title");
-  modalText.textContent = trigger.getAttribute("data-modal-text");
-  modalOverlay.classList.add("active");
-  lastTrigger = trigger;
-  closeBtn.focus();
-}
-
-function closeModal() {
-  modalOverlay.classList.remove("active");
-
-  if (lastTrigger) {
-    lastTrigger.focus();
-  }
-}
-
 modalTriggers.forEach(function (trigger) {
   trigger.addEventListener("click", function () {
-    openModal(this);
+    modalTitle.textContent = this.getAttribute("data-modal-title");
+    modalText.textContent = this.getAttribute("data-modal-text");
+    lastTrigger = this;
+    modal.showModal();
   });
 });
 
-closeBtn.addEventListener("click", closeModal);
+closeBtn.addEventListener("click", function () {
+  modal.close();
+});
 
-modalOverlay.addEventListener("click", function (event) {
-  if (event.target === modalOverlay) {
-    closeModal();
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.close();
   }
 });
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" && modalOverlay.classList.contains("active")) {
-    closeModal();
+modal.addEventListener("close", function () {
+  if (lastTrigger) {
+    lastTrigger.focus();
   }
 });
