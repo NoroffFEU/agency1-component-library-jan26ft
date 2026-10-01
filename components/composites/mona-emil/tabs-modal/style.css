@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+/*-- Tabs --*/
+.tabs {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.tabs__nav {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 2px solid #eee;
+}
+
+.tabs__button {
+  position: relative;
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #888;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.tabs__button:hover {
+  color: #555;
+}
+
+.tabs__button.active {
+  color: #2d627f;
+  border-bottom-color: #2d627f;
+}
+
+/*-- Tabs panel --*/
+.tabs__panels {
+  padding: 24px;
+}
+
+.tabs__panel {
+  display: none;
+}
+.tabs__panel.active {
+  display: block;
+}
+
+.tabs__panel h3 {
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.tabs__panel p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/*-- Modal trigger --*/
+.tabs__modal-trigger {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2d627f;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.tabs__modal-trigger:hover {
+  background: #112f3f;
+}
+
+/*-- Tabs button on smaller screens --*/
+@media (max-width: 400px) {
+  .tabs__nav {
+    flex-direction: column;
+  }
+
+  .tabs__button {
+    border-bottom: 1px solid #eee;
+    border-left: 3px solid transparent;
+  }
+  .tabs__button.active{
+    border-bottom-color: #eee;
+    border-left-color: #2d627f;
+  }
+}
+/*-- Modal --*/
+.modal {
+  width: 90%;
+  max-width: 440px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal[open] {
+  animation: modal-open 0.3s ease;
+}
+
+@keyframes modal-open {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal__content {
+  padding: 28px;
+}
+
+.modal__title {
+  font-size: 1.2rem;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.modal__text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.modal__close {
+  display: block;
+  margin-left: auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #e9ecef;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal__close:hover {
+  background: #dee2e6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal[open] {
+    animation: none;
+  }
+}

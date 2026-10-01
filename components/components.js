@@ -99,5 +99,15 @@ const COMPONENTS = {
       folder: "card-modal-trym-hana",
       author: "Trym & Hana",
     },
+    {
+      name: "Product List + Pagination",
+      folder: "mona-emil/list-pagination",
+      author: "Emil & Mona",
+    },
+    {
+      name: "Tabs + Modal",
+      folder: "mona-emil/tabs-modal",
+      author: "Mona & Emil",
+    },
   ],
 };
