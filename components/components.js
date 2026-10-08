@@ -35,6 +35,7 @@ const COMPONENTS = {
   ],
   cards: [
     { name: "Profile Card", folder: "example-profile", author: "Example" },
+    { name: "Glass Effect Cards", folder: "hana", author: "Hana Amedyan"},
   ],
   carousels: [
     { name: "Image Carousel", folder: "example-slider", author: "Example" },
