@@ -22,7 +22,54 @@
 <section class="lineup"></section>
 
 <!-- ══════ SECTION 3 · TICKETS (Victoria) ══════ -->
-<section class="tickets"></section>
+<section class="tickets">
+<div class="tickets__head">
+    <h2 class="tickets__title">Sikre <em>plassen</em></h2>
+    <p class="tickets__meta">Fyll inn * dra stubben for å sikre / Fill in * Drag the stub to claim</p>
+</div>
+
+<div class="ticket" id="ticket">
+    
+<div class="ticket__main">
+<div class="ticket__tag">Admit one * En natt * 17.10.2026</div>
+<div class="ticket__name">STØY<span>/26</span></div>
+<div class="ticket__info">Sentrum Scene, Oslo - Doors 18:00 - 16+</div>
+
+     <div class="ticket__fields">
+     <div class="field">
+
+<label for="tk-email">E-post / Email</label>
+<input id="tk-email" type="email" inputmode="email" autocomplete="email"
+ placeholder="navn@epost.no">
+</div>
+<div class="field">
+    <label for="tk-phone">Mobilnummer / Phone</label>
+    <input id="tk-phone" type="tel" inputmode="tel" autocomplete="tel"
+     placeholder="+47 000 00 000">
+</div>
+     </div>
+
+     <div class="ticket__price"><span>Fra / From</span><b>690 NOK</b><span>. Early bird til 31.08</span></div>
+
+    <div class="ticket__err" id="tk-err" role="alert" aria-live="polite">  
+    </div>
+</div>
+    <div class="ticket__perf" aria-hidden="true"></div>
+    <div class="ticket__stub" id="tk-stub" role="button" tabindex="0"
+    aria-label="Dra stubben eller trykk Enter for å sikre billetten / Drag or press Enter to claim">
+    <div class="stub-default">
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="stub-label">Drag to claim</span>
+    </div>
+
+    <div class="stub-done">
+        <div class="done-tick" aria-hidden="true">✓</div>
+        <div class="done-line1">Got it</div>
+        <div class="done-line2">Check your<br>inbox</div>
+        </div>
+    </div>        
+</div>
+</section>
 
 <!-- ══════ SECTION 4 · SPONSORS MARQUEE (Stephanie) ══════ -->
 <section class="sponsors"></section>
