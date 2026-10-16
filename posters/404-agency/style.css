@@ -21,6 +21,280 @@ font-family: "Space Grotesk", system-ui, sans-serif;
 /* ══════ SECTION 2 · LINEUP (Paula) ══════ */
 
 /* ══════ SECTION 3 · TICKETS (Victoria) ══════ */
+.tickets {
+--tk-bg: #160a12;
+--tk-cream: #f6e9e2;
+--tk-muted: #a8939a;
+--tk-orange: #ff7a33;
+--tk-green: #1ecf9a;
+--tk-red: #ff5a6e;
+
+position: relative;
+background: var(--tk-bg);
+color: var(--tk-cream);
+padding: clamp(48px, 8vw, 120px) clamp(16px, 5vw, 80px);
+}
+
+.tickets__title {
+    font-family: "archivo black", sans-serif;
+    font-size: clamp(48px, 8vw, 96px);
+    line-height: 1;
+    margin: 0;
+}
+
+.tickets__title em {
+    font-style: normal;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--tk-green);
+}
+
+.tickets__meta {
+    font-family: "DM Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--tk-muted);
+    margin: 16px 0 48px;
+}
+
+.ticket {
+    display: flex;
+    max-width: 860px;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+}
+
+.ticket__main {
+    flex: 1;
+    padding: clamp(24px, 4vw, 40px);
+    border: 1px solid rgba(255, 122, 51, 0.35);
+    border-right: none;
+    border-radius: 16px 0 0 16px;
+    background: linear-gradient(135deg, #2e1519 0%, #1c1418 60%, #142420 100%);
+}
+
+.ticket__tag {
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--tk-orange);
+}
+
+.ticket__name {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(40px, 6vw, 56px);
+    line-height: 1.1;
+    margin-top: 12px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--tk-cream);
+}
+
+.ticket__name span {
+ -webkit-text-stroke-color: var(--tk-green);
+}
+
+.ticket__info {
+    font-family: "DM Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.ticket__fields {   /*skjemaet*/  /*skjemaet*/
+    display: grid;
+    gap: 16px;
+    max-width: 440px;
+    margin-top: 28px;
+}
+
+.ticket .field label { 
+    display: block;
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.ticket .field input {
+    width: 100%;
+    padding: 14px 16px;
+    font: 16px "Space Grotesk", sans-serif;
+    color: var(--tk-cream);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.ticket .field input::placeholder {
+    color: rgba(246, 233, 226, 0.4);
+}
+
+.ticket .field input:focus {
+ border-color: var(--tk-green);
+}
+
+.ticket .field input.is-invalid {
+    border-color: var(--tk-red);
+}
+
+.ticket__price {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 28px;
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--tk-muted);
+}
+
+.ticket__price b {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 28px;
+    letter-spacing: 0;
+    color: var(--tk-cream);
+}
+
+.ticket__err {
+    min-height: 1.4em;
+    margin-top: 12px;
+    font-family: "DM Mono", monospace;
+    font-size: 13px;
+    color: var(--tk-red);
+}
+.ticket__perf {
+ border-left: 2px dashed rgba(246, 233, 226, 0.35);
+ position: relative;
+}
+
+.ticket__perf::before,
+.ticket__perf::after {
+    content: "";
+    position: absolute;
+    left: -13px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--tk-bg);
+}
+
+.ticket__perf::before { top: -12px; }
+.ticket__perf::after  { bottom: -12px;}
+
+.ticket__stub {
+    position: relative;
+    width: 180px;
+    display: grid;
+    place-items: center;
+    border-radius: 0 16px 16px 0;
+    background: linear-gradient(160deg, var(--tk-orange) 0%, var(--tk-green) 100%);
+    color: #1a0d12;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    transition: transform 0.4s cubic-bezier(.2, .8, .2, 1), opacity 0.4s;
+}
+
+.ticket__stub:active { cursor: grabbing;}
+.ticket__stub:focus-visible {
+    outline: 3px solid var(--tk-cream);
+    outline-offset: 4px;
+}
+
+.ticket__stub.is-dragging { transition: none; }
+
+.stub-default,
+.stub-done {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.ticket__stub .arrow { font-size: 48px; line-height: 1; }
+
+.stub-label,
+.done-line1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.done-tick {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.done-line2 {
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.stub-done { display: none;}
+.ticket.is-claimed .stub-default { display: none; }
+.ticket.is-claimed .stub-done { display: grid; }
+.ticket.is-claimed .ticket__stub {
+    cursor: default;
+    transform: translateX(24px) rotate(4deg);
+}
+
+.ticket.is-shaking .ticket__stub { animation: tk-shake 0.4s; }
+
+@keyframes tk-shake {
+    25% {transform: translateX(-8px); }
+    50% {transform: translateX(8px); }
+    75% {transform: translateX(-4px);}
+}
+
+@media (max-width: 640px) {
+    .ticket { flex-direction: column;}
+
+.ticket__main {
+    border-right: 1px solid rgba(255, 122, 51, 0.35);
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
+}
+
+.ticket__perf {
+    border-left: none;
+    border-top: 2px dashed rgba(246, 233, 226, 0.35);
+}
+
+.ticket__perf::before,
+.ticket__perf::after {top: -13px; bottom: auto; }
+.ticket__perf::before { left: -12px;}
+.ticket__perf::after { left: auto; right: -12px; }
+
+.ticket__stub {
+    width: 100%;
+    padding: 28px 0;
+    border-radius: 0 0 16px 16px;
+}
+
+.ticket__stub .arrow { transform: rotate(90deg);}
+.ticket.is-claimed .ticket__stub {transform: translateY(24px) rotate(-3deg);}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ticket__stub { transition: none; }
+    .ticket.is-shaking .ticket__stub { animation: none; }
+}
+
+
 
 /* ══════ SECTION 4 · SPONSORS MARQUEE (Stephanie) ══════ */
 
