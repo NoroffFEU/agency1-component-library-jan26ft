@@ -1,0 +1,27 @@
+:root {
+--bg: #160a12;
+--orange: #ff7a33;
+--green: #1ecf9a;
+--white: #fff2ea;
+--card: #ece7dd;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+background: var(--bg);
+color: var(--white);
+font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+/* ══════ SECTION 1 · HERO (Paula) ══════ */
+
+/* ══════ SECTION 2 · LINEUP (Paula) ══════ */
+
+/* ══════ SECTION 3 · TICKETS (Victoria) ══════ */
+
+/* ══════ SECTION 4 · SPONSORS MARQUEE (Stephanie) ══════ */
+
+/* ══════ SECTION 5 · FAQ (Trym) ══════ */
