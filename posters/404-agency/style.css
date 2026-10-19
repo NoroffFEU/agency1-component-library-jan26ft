@@ -1,19 +1,25 @@
 :root {
---bg: #160a12;
---orange: #ff7a33;
---green: #1ecf9a;
---white: #fff2ea;
---card: #ece7dd;
+  --bg: #160a12;
+  --orange: #ff7a33;
+  --green: #1ecf9a;
+  --white: #fff2ea;
+  --card: #ece7dd;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body { margin: 0; padding: 0; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-background: var(--bg);
-color: var(--white);
-font-family: "Space Grotesk", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 /* ══════ SECTION 1 · HERO (Paula) ══════ */
@@ -25,3 +31,99 @@ font-family: "Space Grotesk", system-ui, sans-serif;
 /* ══════ SECTION 4 · SPONSORS MARQUEE (Stephanie) ══════ */
 
 /* ══════ SECTION 5 · FAQ (Trym) ══════ */
+/* ══════ SECTION 5 · FAQ (Trym) ══════ */
+
+.faq {
+  padding: 60px 24px;
+  background: var(--bg);
+}
+
+.faq__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq__eyebrow {
+  margin: 0 0 8px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--orange);
+}
+
+.faq__title {
+  margin: 0 0 32px;
+
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.faq__list {
+  border-top: 1px solid rgba(255, 242, 234, 0.25);
+}
+
+.faq__item {
+  border-bottom: 1px solid rgba(255, 242, 234, 0.25);
+}
+
+.faq__question {
+  width: 100%;
+  padding: 20px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.faq__question:hover {
+  color: var(--orange);
+}
+
+.faq__icon {
+  flex-shrink: 0;
+
+  font-family: "DM Mono", monospace;
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+.faq__answer {
+  display: none;
+  padding: 0 0 16px;
+}
+
+.faq__answer p {
+  margin: 0;
+  max-width: 650px;
+
+  line-height: 1.6;
+  color: rgba(255, 242, 234, 0.75);
+}
+@media (max-width: 600px) {
+  .faq {
+    padding: 56px 18px;
+  }
+
+  .faq__title {
+    font-size: 2.4rem;
+  }
+
+  .faq__question {
+    font-size: 1rem;
+    padding: 18px 0;
+  }
+}
