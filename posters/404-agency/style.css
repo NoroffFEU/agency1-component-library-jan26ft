@@ -199,6 +199,108 @@ filter: drop-shadow(0 0 14px rgba(30, 207, 154, 0.55));
 .grid--support { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Bio modal */
+
+.modal {
+position: fixed;
+inset: 0;
+z-index: 60;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 24px;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.open { opacity: 1; visibility: visible; }
+
+.modal__backdrop {
+position: absolute;
+inset: 0;
+background: rgba(2, 3, 8, 0.82);
+-webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+}
+
+.modal__panel {
+position: relative;
+z-index: 1;
+width: min(560px, 100%);
+max-height: 88vh;
+overflow-y: auto;
+background: #1d1019;
+border: 1px solid rgba(255, 242, 234, 0.12);
+border-radius: 18px;
+box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+transform: translateY(16px) scale(0.98);
+transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.modal.open .modal__panel { transform: none; }
+
+.modal__body { padding: clamp(26px, 3vw, 42px); }
+
+.modal__role {
+margin: 0 0 14px;
+font-family: "DM Mono", monospace;
+font-size: 11px;
+letter-spacing: 0.28em;
+text-transform: uppercase;
+color: var(--orange);
+}
+
+.modal__name {
+margin: 0;
+font-family: "Archivo Black", sans-serif;
+font-size: clamp(34px, 4.5vw, 58px);
+line-height: 0.92;
+letter-spacing: -0.02em;
+color: var(--white);
+}
+
+.modal__tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 22px; }
+
+.modal__tag {
+
+font-family: "DM Mono", monospace;
+font-size: 11px;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: rgba(255, 242, 234, 0.8);
+border: 1px solid rgba(255, 242, 234, 0.22);
+border-radius: 999px;
+padding: 6px 14px;
+}
+
+.modal__bio {
+margin: 0 0 14px;
+font-size: clamp(14px, 1.5vw, 16px);
+line-height: 1.62;
+color: rgba(255, 242, 234, 0.82);
+}
+
+.modal__bio--no { font-size: 13px; font-style: italic; color: rgba(255, 242, 234, 0.5); }
+
+.modal__close {
+position: absolute;
+top: 14px;
+right: 14px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+cursor: pointer;
+background: rgba(11, 13, 20, 0.7);
+border: 1px solid rgba(255, 242, 234, 0.2);
+color: var(--white);
+font-size: 18px;
+display: grid;
+place-items: center;
+transition: background 0.2s, transform 0.2s;
+}
+.modal__close:hover { background: var(--green); transform: rotate(90deg); }
+
 /* ══════ SECTION 3 · TICKETS (Victoria) ══════ */
 
 /* ══════ SECTION 4 · SPONSORS MARQUEE (Stephanie) ══════ */
