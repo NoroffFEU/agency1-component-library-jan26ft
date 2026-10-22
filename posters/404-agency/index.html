@@ -1,29 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>STØY / 26 — 404 Agency</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono&family=Oswald:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>STØY / 26 — 404 Agency</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono&family=Oswald:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
     <script src="js/lineup.js" defer></script>
     <script src="js/tickets.js" defer></script>
     <script src="js/marquee.js" defer></script>
     <script src="js/faq.js" defer></script>
-  </head>
-  <body>
+    </head>
+<body>
 
 <!-- ══════ SECTION 1 · HERO (Stephanie) ══════ -->
 <section class="hero">
+        <div class="hero-bg">
+        <img src="images/hero-crowd.jpg" alt="Festival crowd in front of the stage">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-scan"></div>
     <div class="hero-content">
         <p class="hero-label">404 AGENCY PRESENTS</p>
 
-        <h1 class="hero-title">STØY<span>/26</span></h1>
+        <h1 class="hero-title">
+            <span class="hero-title__stoy">STØY</span>
+            <span class="hero-title__year"><span class="slash">/</span>26</span>
+        </h1>
 
         <p class="hero-description">
             TURN UP THE NOISE. FEEL THE ENERGY.
@@ -211,62 +216,53 @@
 </section>
 
     <!-- ══════ SECTION 5 · FAQ (Trym) ══════ -->
-    <section class="faq">
-      <div class="faq__inner">
-        <p class="faq__eyebrow">QUESTIONS / ANSWERS</p>
-        <h2 class="faq__title">GOOD TO KNOW</h2>
+<section class="faq">
+    <div class="faq__inner">
+        <h2 class="faq__title">Spørs<em>mål</em></h2>
+        <p class="faq__meta">Ofte stilte spørsmål · Frequently asked</p>
 
         <div class="faq__list">
-          <div class="faq__item">
-            <button class="faq__question">
-              What time do the gates open?
-              <span class="faq__icon">+</span>
-            </button>
-
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span class="faq__qtext">Når åpner dørene?<span class="faq__qen">When do doors open?</span></span>
+                    <span class="faq__icon">+</span>
+                </button>
             <div class="faq__answer">
-              <p>The festival gates open at 14:00.</p>
+                <p>Dørene åpner <b>18:00</b>.<br>Doors open at 18:00.</p>
             </div>
-          </div>
-
-          <div class="faq__item">
-            <button class="faq__question">
-              Is there an age limit?
-              <span class="faq__icon">+</span>
-            </button>
-
-            <div class="faq__answer">
-              <p>STØY is an 18+ event.</p>
             </div>
-          </div>
 
-          <div class="faq__item">
-            <button class="faq__question">
-              Can I bring food and drinks?
-              <span class="faq__icon">+</span>
-            </button>
-
-            <div class="faq__answer">
-              <p>
-                Outside food and drinks are not permitted inside the festival
-                area.
-              </p>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span class="faq__qtext">Hvor gammel må jeg være?<span class="faq__qen">What's the age limit?</span></span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p><b>16 år.</b> Ta med gyldig legitimasjon.<br>Ages 16 and up. Bring valid photo ID.</p>
+                </div>
             </div>
-          </div>
 
-          <div class="faq__item">
-            <button class="faq__question">
-              What happens if it rains?
-              <span class="faq__icon">+</span>
-            </button>
-
-            <div class="faq__answer">
-              <p>
-                The festival goes ahead rain or shine, so dress for the weather.
-              </p>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span class="faq__qtext">Kan jeg ta med mat og drikke?<span class="faq__qen">Can I bring food and drinks?</span></span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Medbrakt mat og drikke er ikke tillatt.<br>Outside food and drinks are not permitted.</p>
+                </div>
             </div>
-          </div>
+
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span class="faq__qtext">Kan jeg få refusjon på billetten?<span class="faq__qen">Can I get a refund on my ticket?</span></span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Billetter refunderes ikke, men du kan overføre billetten til en venn. Blir festivalen avlyst, får du pengene tilbake.<br>Tickets are non-refundable, but you can transfer your ticket to a friend. If the festival is cancelled, you get your money back.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-  </body>
+    </div>
+</section>
+</body>
 </html>
