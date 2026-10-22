@@ -1,25 +1,25 @@
 :root {
-  --bg: #160a12;
-  --orange: #ff7a33;
-  --green: #1ecf9a;
-  --white: #fff2ea;
-  --card: #ece7dd;
+--bg: #160a12;
+--orange: #ff7a33;
+--green: #1ecf9a;
+--white: #fff2ea;
+--card: #ece7dd;
 }
 
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+margin: 0;
+padding: 0;
 }
 
 body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: "Space Grotesk", system-ui, sans-serif;
+background: var(--bg);
+color: var(--white);
+font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 /* SECTION 1 · HERO (Stephanie) */
@@ -43,19 +43,6 @@ body {
     font-family: "DM Mono", monospace;
     font-size: 14px;
     letter-spacing: 4px;
-    color: var(--green);
-}
-
-.hero-title {
-    font-family: "Archivo Black", sans-serif;
-    font-size: clamp(80px, 16vw, 220px);
-    line-height: 1;
-    letter-spacing: -8px;
-    color: var(--orange);
-    margin: 30px 0;
-}
-
-.hero-title span {
     color: var(--green);
 }
 
@@ -100,6 +87,133 @@ body {
         flex-direction: column;
         gap: 12px;
     }
+}
+
+/* ── Final pass: background photo ── */
+
+.hero {
+position: relative;
+overflow: hidden;
+}
+
+.hero-bg {
+position: absolute;
+inset: 0;
+z-index: 0;
+background: var(--bg);
+}
+
+.hero-bg img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center 30%;
+filter: grayscale(1) sepia(0.6) saturate(1.55) hue-rotate(328deg) brightness(0.98);
+}
+
+.hero-scrim {
+position: absolute;
+inset: 0;
+z-index: 1;
+pointer-events: none;
+background:
+    linear-gradient(180deg, rgba(30, 207, 154, 0.3) 0%, transparent 34%, rgba(255, 122, 51, 0.2) 100%),
+    radial-gradient(60% 48% at 50% 44%, rgba(22, 10, 18, 0.5) 0%, rgba(22, 10, 18, 0.18) 55%, rgba(22, 10, 18, 0) 78%),
+    linear-gradient(180deg, rgba(22, 10, 18, 0.35) 0%, rgba(22, 10, 18, 0) 40%, rgba(22, 10, 18, 0.55) 100%);
+}
+
+.hero-scan {
+position: absolute;
+inset: 0;
+z-index: 2;
+pointer-events: none;
+opacity: 0.35;
+background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 4px);
+}
+
+.hero-content {
+position: relative;
+z-index: 3;
+}
+
+/* ── Final pass: neon title ── */
+
+.hero-title {
+font-family: "Archivo Black", sans-serif;
+line-height: 0.82;
+text-shadow: none;
+margin: 30px 0;
+}
+
+.hero-title__stoy,
+.hero-title__year {
+display: block;
+color: transparent;
+-webkit-text-stroke: 2px rgba(255, 255, 255, 0.92);
+}
+
+.hero-title__stoy {
+font-size: clamp(96px, 26vw, 360px);
+animation: neonPulse 5s ease-in-out infinite;
+}
+
+.hero-title__year {
+font-size: clamp(64px, 15vw, 200px);
+margin-top: clamp(4px, 1vw, 14px);
+font-weight: 400; 
+animation: neonPulseGreen 5s ease-in-out infinite;
+}
+
+.hero-title__year .slash {
+color: var(--green);
+-webkit-text-stroke: 0;
+}
+
+@keyframes neonPulse {
+0%, 100% {
+    opacity: 0.9;
+    filter:
+    drop-shadow(0 0 4px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 0 14px var(--orange))
+    drop-shadow(0 0 34px var(--orange))
+    drop-shadow(0 0 60px rgba(255, 122, 51, 0.5));
+}
+
+50% {
+    opacity: 1;
+    filter:
+    drop-shadow(0 0 7px #fff)
+    drop-shadow(0 0 24px var(--orange))
+    drop-shadow(0 0 54px var(--orange))
+    drop-shadow(0 0 96px rgba(255, 122, 51, 0.7));
+}
+}
+
+@keyframes neonPulseGreen {
+
+0%, 100% {
+opacity: 0.95;
+filter:
+    drop-shadow(0 0 5px #fff)
+    drop-shadow(0 0 18px var(--green))
+    drop-shadow(0 0 40px var(--green))
+    drop-shadow(0 0 80px rgba(30, 207, 154, 0.8));
+}
+
+50% {
+opacity: 1;
+filter:
+    drop-shadow(0 0 8px #fff)
+    drop-shadow(0 0 28px var(--green))
+    drop-shadow(0 0 64px var(--green))
+    drop-shadow(0 0 120px rgba(30, 207, 154, 0.9));
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.hero-title__stoy,
+.hero-title__year { animation: none; }
 }
 
 /* ══════ SECTION 2 · LINEUP (Paula) ══════ */
@@ -393,6 +507,7 @@ transition: background 0.2s, transform 0.2s;
 }
 
 /* ══════ SECTION 3 · TICKETS (Victoria) ══════ */
+
 .tickets {
 --tk-bg: #160a12;
 --tk-cream: #f6e9e2;
@@ -404,13 +519,14 @@ transition: background 0.2s, transform 0.2s;
 position: relative;
 background: var(--tk-bg);
 color: var(--tk-cream);
-padding: clamp(48px, 8vw, 120px) clamp(16px, 5vw, 80px);
+padding: clamp(64px, 10vw, 130px) clamp(24px, 5vw, 80px) clamp(72px, 9vw, 120px);
 }
 
 .tickets__title {
-    font-family: "archivo black", sans-serif;
-    font-size: clamp(48px, 8vw, 96px);
-    line-height: 1;
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(44px, 8vw, 92px);
+    letter-spacing: -0.3em;
+    line-height: 0.9;
     margin: 0;
 }
 
@@ -422,10 +538,10 @@ padding: clamp(48px, 8vw, 120px) clamp(16px, 5vw, 80px);
 
 .tickets__meta {
     font-family: "DM Mono", monospace;
-    font-size: 13px;
-    letter-spacing: 0.25em;
+    font-size: clamp(11px, 1.2vw, 13px);
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--tk-muted);
+    color: rgba(255, 242, 234, 0.55);
     margin: 16px 0 48px;
 }
 
@@ -506,7 +622,7 @@ padding: clamp(48px, 8vw, 120px) clamp(16px, 5vw, 80px);
 }
 
 .ticket .field input:focus {
- border-color: var(--tk-green);
+    border-color: var(--tk-green);
 }
 
 .ticket .field input.is-invalid {
@@ -669,6 +785,7 @@ padding: clamp(48px, 8vw, 120px) clamp(16px, 5vw, 80px);
 
 
 /* ══════ SECTION 4 · SPONSORS MARQUEE (Stephanie) ══════ */
+
 .sponsors {
     width: 100%;
     overflow: hidden;
@@ -715,10 +832,9 @@ padding: clamp(48px, 8vw, 120px) clamp(16px, 5vw, 80px);
 }
 
 /* ══════ SECTION 5 · FAQ (Trym) ══════ */
-/* ══════ SECTION 5 · FAQ (Trym) ══════ */
 
 .faq {
-  padding: 60px 24px;
+  padding: clamp(64px, 10vw, 130px) clamp(24px, 5vw, 80px) clamp(72px, 9vw, 120px);
   background: var(--bg);
 }
 
@@ -737,11 +853,48 @@ padding: clamp(48px, 8vw, 120px) clamp(16px, 5vw, 80px);
 }
 
 .faq__title {
-  margin: 0 0 32px;
+margin: 0;
+font-family: "Archivo Black", sans-serif;
+font-size: clamp(44px, 8vw, 92px);
+letter-spacing: -0.03em;
+line-height: 0.9;
+color: var(--white);
+}
 
-  font-family: "Archivo Black", sans-serif;
-  font-size: clamp(2.2rem, 6vw, 4.5rem);
-  line-height: 0.95;
+/* ── Final pass: FAQ title and bilingual lines ── */
+
+.faq__title em {
+font-style: normal;
+color: transparent;
+-webkit-text-stroke: 2px var(--orange);
+}
+
+.faq__meta {
+margin: 16px 0 clamp(20px, 3vw, 36px);
+font-family: "DM Mono", monospace;
+font-size: clamp(11px, 1.2vw, 13px);
+letter-spacing: 0.22em;
+text-transform: uppercase;
+color: rgba(255, 242, 234, 0.55);
+}
+
+.faq__qtext {
+font-family: "Oswald", sans-serif;
+font-weight: 500;
+font-size: clamp(19px, 2.4vw, 30px);
+text-transform: uppercase;
+line-height: 1.1;
+text-align: left;
+}
+
+.faq__qen {
+display: block;
+margin-top: 7px;
+font-family: "DM Mono", monospace;
+font-size: 12px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+color: rgba(255, 242, 234, 0.42);
 }
 
 .faq__list {
@@ -797,6 +950,7 @@ padding: clamp(48px, 8vw, 120px) clamp(16px, 5vw, 80px);
   line-height: 1.6;
   color: rgba(255, 242, 234, 0.75);
 }
+
 @media (max-width: 600px) {
   .faq {
     padding: 56px 18px;
