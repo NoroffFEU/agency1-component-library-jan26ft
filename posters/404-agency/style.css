@@ -270,7 +270,7 @@ display: flex;
 flex-direction: column;
 gap: 4px;
 background: var(--card);
-color: #15141a;
+color: var(--bg);
 border-radius: 11px;
 padding: clamp(13px, 1.3vw, 18px) clamp(15px, 1.6vw, 20px);
 transition: transform 0.3s ease, box-shadow 0.4s ease;
@@ -319,13 +319,14 @@ line-height: 1;
 
 .card--head .card__name { font-size: clamp(26px, 2.8vw, 40px); }
 .card--support .card__name { font-size: clamp(19px, 2vw, 27px); }
+
 .card__sub {
 margin: 0;
 font-family: "DM Mono", monospace;
 font-size: 11px;
 letter-spacing: 0.1em;
 text-transform: uppercase;
-color: rgba(21, 20, 26, 0.6);
+color: rgba(22, 10, 18, 0.6);
 }
 
 /* ⓘ button */
@@ -335,9 +336,9 @@ flex: none;
 width: 24px;
 height: 24px;
 border-radius: 50%;
-border: 1.5px solid rgba(21, 20, 26, 0.3);
+border: 1.5px solid rgba(22, 10, 18, 0.3);
 background: transparent;
-color: #15141a;
+color: var(--bg);
 cursor: pointer;
 display: grid;
 place-items: center;
@@ -349,9 +350,9 @@ transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 .info-btn:hover {
-background: #15141a;
+background: var(--bg);
 color: var(--card);
-border-color: #15141a;
+border-color: var(--bg);
 transform: scale(1.08);
 }
 
@@ -414,7 +415,7 @@ transition: opacity 0.3s ease, visibility 0.3s ease;
 .modal__backdrop {
 position: absolute;
 inset: 0;
-background: rgba(2, 3, 8, 0.82);
+background: rgba(22, 10, 18, 0.85);
 -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
 }
@@ -425,7 +426,7 @@ z-index: 1;
 width: min(560px, 100%);
 max-height: 88vh;
 overflow-y: auto;
-background: #1d1019;
+background: var(--bg);
 border: 1px solid rgba(255, 242, 234, 0.12);
 border-radius: 18px;
 box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
@@ -458,7 +459,6 @@ color: var(--white);
 .modal__tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 22px; }
 
 .modal__tag {
-
 font-family: "DM Mono", monospace;
 font-size: 11px;
 letter-spacing: 0.12em;
@@ -486,7 +486,7 @@ width: 38px;
 height: 38px;
 border-radius: 50%;
 cursor: pointer;
-background: rgba(11, 13, 20, 0.7);
+background: rgba(22, 10, 18, 0.7);
 border: 1px solid rgba(255, 242, 234, 0.2);
 color: var(--white);
 font-size: 18px;
@@ -497,6 +497,7 @@ transition: background 0.2s, transform 0.2s;
 .modal__close:hover { background: var(--green); transform: rotate(90deg); }
 
 /* Small phones: headliners stack */
+
 @media (max-width: 480px) {
 .grid--head { grid-template-columns: 1fr; }
 .reveal { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -506,11 +507,11 @@ transition: background 0.2s, transform 0.2s;
 /* ══════ SECTION 3 · TICKETS (Victoria) ══════ */
 
 .tickets {
---tk-bg: #160a12;
---tk-cream: #f6e9e2;
---tk-muted: #a8939a;
---tk-orange: #ff7a33;
---tk-green: #1ecf9a;
+--tk-bg: var(--bg);
+--tk-cream: var(--white);
+--tk-muted: rgba(255, 242, 234, 0.55);
+--tk-orange: var(--orange);
+--tk-green: var(--green);
 --tk-red: #ff5a6e;
 
 position: relative;
