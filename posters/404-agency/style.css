@@ -60,6 +60,7 @@ font-family: "Space Grotesk", system-ui, sans-serif;
     font-family: "DM Mono", monospace;
     font-size: 14px;
     margin-bottom: 40px;
+    letter-spacing: 0.2rem;
 }
 
 .hero-button {
@@ -79,10 +80,6 @@ font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 @media (max-width: 600px) {
-    .hero-title {
-        letter-spacing: -4px;
-    }
-
     .hero-details {
         flex-direction: column;
         gap: 12px;
@@ -843,15 +840,6 @@ padding: clamp(64px, 10vw, 130px) clamp(24px, 5vw, 80px) clamp(72px, 9vw, 120px)
   margin: 0 auto;
 }
 
-.faq__eyebrow {
-  margin: 0 0 8px;
-
-  font-family: "DM Mono", monospace;
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  color: var(--orange);
-}
-
 .faq__title {
 margin: 0;
 font-family: "Archivo Black", sans-serif;
@@ -918,9 +906,6 @@ color: rgba(255, 242, 234, 0.42);
   background: transparent;
 
   color: var(--white);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
   text-align: left;
 
   cursor: pointer;
@@ -951,17 +936,4 @@ color: rgba(255, 242, 234, 0.42);
   color: rgba(255, 242, 234, 0.75);
 }
 
-@media (max-width: 600px) {
-  .faq {
-    padding: 56px 18px;
-  }
 
-  .faq__title {
-    font-size: 2.4rem;
-  }
-
-  .faq__question {
-    font-size: 1rem;
-    padding: 18px 0;
-  }
-}
