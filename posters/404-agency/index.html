@@ -36,10 +36,162 @@
 </section>
 
 <!-- ══════ SECTION 2 · LINEUP (Paula) ══════ -->
-<section class="lineup"></section>
+<section class="lineup">
+    <div class="lineup__head">
+        <h2 class="lineup__title">Line<em>up</em></h2>
+        <p class="lineup__meta">11 acts · 3 stages · 1 night — tap ⓘ for bio</p>
+    </div>
+
+    <!-- Headliners -->
+    <div class="grid grid--head">
+        <article class="card card--head" data-artist="AURORA">
+            <div class="card__row">
+                <h3 class="card__name">Aurora</h3>
+                <button class="info-btn" data-artist="AURORA" aria-label="More about Aurora">i</button>
+            </div>
+            <p class="card__sub">Bergen · Art-pop</p>
+        </article>
+        <article class="card card--head" data-artist="KYGO">
+            <div class="card__row">
+                <h3 class="card__name">Kygo</h3>
+                <button class="info-btn" data-artist="KYGO" aria-label="More about Kygo">i</button>
+            </div>
+            <p class="card__sub">Bergen · Tropical house</p>
+        </article>
+    </div>
+
+    <!-- Supporting acts -->
+    <div class="grid grid--support">
+        <article class="card card--support" data-artist="SIGRID">
+        <div class="card__row">
+            <h3 class="card__name">Sigrid</h3>
+            <button class="info-btn" data-artist="SIGRID" aria-label="More about Sigrid">i</button>
+        </div>
+        <p class="card__sub">Ålesund · Pop</p>
+        </article>
+        <article class="card card--support" data-artist="KARPE">
+            <div class="card__row">
+                <h3 class="card__name">Karpe</h3>
+                <button class="info-btn" data-artist="KARPE" aria-label="More about Karpe">i</button>
+            </div>
+            <p class="card__sub">Oslo · Hip-hop</p>
+        </article>
+        <article class="card card--support" data-artist="GIRL IN RED">
+            <div class="card__row">
+                <h3 class="card__name">girl in red</h3>
+                <button class="info-btn" data-artist="GIRL IN RED" aria-label="More about girl in red">i</button>
+            </div>
+            <p class="card__sub">Horten · Indie-pop</p>
+        </article>
+        <article class="card card--support" data-artist="CEZINANDO">
+            <div class="card__row">
+                <h3 class="card__name">Cezinando</h3>
+                <button class="info-btn" data-artist="CEZINANDO" aria-label="More about Cezinando">i</button>
+            </div>
+            <p class="card__sub">Oslo · Rap</p>
+        </article>
+        <article class="card card--support" data-artist="ASTRID S">
+            <div class="card__row">
+                <h3 class="card__name">Astrid S</h3>
+                <button class="info-btn" data-artist="ASTRID S" aria-label="More about Astrid S">i</button>
+            </div>
+            <p class="card__sub">Berkåk · Pop</p>
+        </article>
+        <article class="card card--support" data-artist="HKEEM">
+            <div class="card__row">
+                <h3 class="card__name">Hkeem</h3>
+                <button class="info-btn" data-artist="HKEEM" aria-label="More about Hkeem">i</button>
+            </div>
+            <p class="card__sub">Lørenskog · Rap</p>
+        </article>
+        <article class="card card--support" data-artist="ARIF">
+            <div class="card__row">
+                <h3 class="card__name">Arif</h3>
+                <button class="info-btn" data-artist="ARIF" aria-label="More about Arif">i</button>
+            </div>
+            <p class="card__sub">Oslo · R&amp;B / Rap</p>
+        </article>
+        <article class="card card--support" data-artist="UNGE FERRARI">
+            <div class="card__row">
+                <h3 class="card__name">Unge Ferrari</h3>
+                <button class="info-btn" data-artist="UNGE FERRARI" aria-label="More about Unge Ferrari">i</button>
+            </div>
+            <p class="card__sub">Oslo · Hip-hop</p>
+        </article>
+    </div>
+
+    <!-- Headliner reveal -->
+        <div class="reveal">
+            <span class="reveal__label">11 · Headliner</span>
+            <span class="reveal__name">TO BE REVEALED</span>
+            <span class="reveal__label">Announced 01.09</span>
+        </div>
+</section>
+
+<!-- Lineup bio modal (Paula) -->
+<div class="modal" id="lineupModal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel">
+        <button class="modal__close" data-close aria-label="Close">✕</button>
+        <div class="modal__body">
+            <p class="modal__role" id="modalRole"></p>
+            <h3 class="modal__name" id="modalName"></h3>
+            <div class="modal__tags" id="modalTags"></div>
+            <p class="modal__bio" id="modalBio"></p>
+            <p class="modal__bio modal__bio--no" id="modalBioNo"></p>
+        </div>
+    </div>
+</div>
 
 <!-- ══════ SECTION 3 · TICKETS (Victoria) ══════ -->
-<section class="tickets"></section>
+<section class="tickets" id="tickets">
+<div class="tickets__head">
+    <h2 class="tickets__title">Sikre <em>plassen</em></h2>
+    <p class="tickets__meta">Fyll inn * dra stubben for å sikre / Fill in * Drag the stub to claim</p>
+</div>
+
+<div class="ticket" id="ticket">
+    
+<div class="ticket__main">
+<div class="ticket__tag">Admit one * En natt * 17.10.2026</div>
+<div class="ticket__name">STØY<span>/26</span></div>
+<div class="ticket__info">Sentrum Scene, Oslo - Doors 18:00 - 16+</div>
+
+     <div class="ticket__fields">
+     <div class="field">
+
+<label for="tk-email">E-post / Email</label>
+<input id="tk-email" type="email" inputmode="email" autocomplete="email"
+ placeholder="navn@epost.no">
+</div>
+<div class="field">
+    <label for="tk-phone">Mobilnummer / Phone</label>
+    <input id="tk-phone" type="tel" inputmode="tel" autocomplete="tel"
+     placeholder="+47 000 00 000">
+</div>
+     </div>
+
+     <div class="ticket__price"><span>Fra / From</span><b>690 NOK</b><span>. Early bird til 31.08</span></div>
+
+    <div class="ticket__err" id="tk-err" role="alert" aria-live="polite">  
+    </div>
+</div>
+    <div class="ticket__perf" aria-hidden="true"></div>
+    <div class="ticket__stub" id="tk-stub" role="button" tabindex="0"
+    aria-label="Dra stubben eller trykk Enter for å sikre billetten / Drag or press Enter to claim">
+    <div class="stub-default">
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="stub-label">Drag to claim</span>
+    </div>
+
+    <div class="stub-done">
+        <div class="done-tick" aria-hidden="true">✓</div>
+        <div class="done-line1">Got it</div>
+        <div class="done-line2">Check your<br>inbox</div>
+        </div>
+    </div>        
+</div>
+</section>
 
 <!-- ══════ SECTION 4 · SPONSORS MARQUEE (Stephanie) ══════ -->
 <section class="sponsors" aria-label="Festival sponsors">
