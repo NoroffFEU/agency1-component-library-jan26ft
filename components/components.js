@@ -35,9 +35,11 @@ const COMPONENTS = {
   ],
   cards: [
     { name: "Profile Card", folder: "example-profile", author: "Example" },
+    { name: "Profile Card", folder: "profile-card", author: "Victoria" },
   ],
   carousels: [
     { name: "Image Carousel", folder: "example-slider", author: "Example" },
+    { name: "Step Carousel", folder: "soreng95", author: "Soreng95" },
   ],
   drawers: [
     { name: "Sidebar Drawer", folder: "example-sidebar", author: "Example" },

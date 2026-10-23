@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #fafafa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a1a;
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+  padding: 16px;
+}
+
+.carousel {
+  border: 1px solid #d8d8d8;
+  background: #fff;
+}
+
+.carousel:focus {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+.carousel__viewport {
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  padding: 44px 32px;
+  border-left: 3px solid transparent;
+}
+
+.carousel__slide.is-active {
+  border-left-color: #1a1a1a;
+}
+
+.carousel__step {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: #8a8a8a;
+  margin-bottom: 10px;
+}
+
+.carousel__slide h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.carousel__slide p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5a5a5a;
+  max-width: 38ch;
+}
+
+.carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-top: 1px solid #ececec;
+}
+
+.carousel__nav {
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 0.85rem;
+  font-family: inherit;
+  padding: 7px 16px;
+  cursor: pointer;
+}
+
+.carousel__nav:hover {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+.carousel__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.carousel__dot {
+  width: 24px;
+  height: 4px;
+  padding: 0;
+  border: none;
+  background: #dcdcdc;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.carousel__dot:hover {
+  background: #b0b0b0;
+}
+
+.carousel__dot.is-active {
+  background: #1a1a1a;
+}
+
+@media (max-width: 480px) {
+  .carousel__slide {
+    padding: 28px 20px;
+  }
+
+  .carousel__slide h2 {
+    font-size: 1.25rem;
+  }
+
+  .carousel__dot {
+    width: 16px;
+  }
+
+  .carousel__nav {
+    padding: 7px 12px;
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step Carousel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="carousel" tabindex="0" role="region" aria-label="Step carousel">
+      <div class="carousel__viewport">
+        <div class="carousel__track">
+          <div class="carousel__slide">
+            <span class="carousel__step">01</span>
+            <h2>Plan it</h2>
+            <p>Write down what the component needs to do before opening the editor.</p>
+          </div>
+          <div class="carousel__slide">
+            <span class="carousel__step">02</span>
+            <h2>Build it</h2>
+            <p>Start with plain HTML, then add the styling and the behaviour on top.</p>
+          </div>
+          <div class="carousel__slide">
+            <span class="carousel__step">03</span>
+            <h2>Test it</h2>
+            <p>Click through every control and check it on a narrow screen as well.</p>
+          </div>
+          <div class="carousel__slide">
+            <span class="carousel__step">04</span>
+            <h2>Ship it</h2>
+            <p>Open a pull request and ask someone on the team for a review.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel__controls">
+        <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous slide">Prev</button>
+        <div class="carousel__dots"></div>
+        <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next slide">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
